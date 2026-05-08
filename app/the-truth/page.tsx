@@ -21,7 +21,7 @@ export default function theTruth() {
     return <p className="p-10 text-center">Loading...</p>;
   }
 
-  const content = data.content; // ✅ IMPORTANT FIX
+  const content = data;
   console.log("TRUTH FULL DATA:", data);
   return (
     <>
