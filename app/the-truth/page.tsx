@@ -21,7 +21,7 @@ export default function theTruth() {
     return <p className="p-10 text-center">Loading...</p>;
   }
 
-  const content = data;
+  const content = data.content; // ✅ IMPORTANT FIX
   console.log("TRUTH CONTENT:", content);
   return (
     <>
@@ -34,10 +34,10 @@ export default function theTruth() {
           <div className="max-w-3xl mx-auto">
 
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            {content.hero_title}
+            {content?.hero_title}
             </h1>
 
-            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.hero_subtitle }}
+            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content?.hero_subtitle }}
           />
 
           </div>
