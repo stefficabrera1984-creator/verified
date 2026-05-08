@@ -54,7 +54,7 @@ export default function theTruth() {
         <section className="py-16 md:py-20 px-6">
   <div className="max-w-5xl mx-auto space-y-12">
 
-  {content?.phases?.map((phase: any, i: number) => (
+    {content?.steps?.map((step: any, i: number) => (
       <div key={i} className="flex gap-6">
 
         {/* NUMBER */}
@@ -66,26 +66,24 @@ export default function theTruth() {
         <div>
 
           <h3 className="text-xl font-semibold mb-2">
-            {phase.title}
+            {step.title}
           </h3>
 
+          {/* ✅ FIXED: subtitle instead of desc */}
           <div
             className="text-gray-600 text-sm mb-4"
-            dangerouslySetInnerHTML={{ __html: phase.desc }}
+            dangerouslySetInnerHTML={{ __html: step.subtitle }}
           />
 
           {/* SUB POINTS */}
           <div className="space-y-4">
-          {phase.points.map((point: { title: string; desc: string }, j: number) => (
+            {step?.points?.map((point: string, j: number) => (
               <div
                 key={j}
                 className="bg-[#F9FBFB] p-4 rounded-lg border-l-4 border-[#2ED3B7]"
               >
                 <p className="text-sm text-gray-700">
-                  <span className="font-semibold text-[#0A1E39]">
-                    {point.title}:
-                  </span>{" "}
-                  {point.desc}
+                  {point} {/* ✅ FIXED: simple string */}
                 </p>
               </div>
             ))}
