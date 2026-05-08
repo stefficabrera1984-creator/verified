@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
-export default function TheLegal() {
+export default function theLegal() {
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
