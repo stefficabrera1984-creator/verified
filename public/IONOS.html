@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<!-- saved from url=(0147)https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer/edit-file?file=index.php&path=%2Fverified%2Fbackend%2Fpublic -->
+<html lang="en" data-exos-theme="ionos"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>IONOS</title>
+
+    
+
+    
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=DC-13183894&amp;cx=c&amp;gtm=4e6562" nonce=""></script><script type="text/javascript" async="">var IAS = IAS || {}; IAS.layer = function(containerElem, host, zone) {};</script><script type="text/javascript" async="" src="./IONOS_files/destination" nonce=""></script><script type="text/javascript" async="" defer="" src="./IONOS_files/piwik.js"></script><script async="" src="./IONOS_files/48gpcp.js"></script><script type="text/javascript" async="" src="./IONOS_files/surveys.js"></script><script type="text/javascript" async="" src="./IONOS_files/ias.js"></script><script type="text/javascript" async="" src="./IONOS_files/privacyconsent.js"></script><script type="text/javascript" async="" src="./IONOS_files/navigation.js"></script><script type="text/javascript" async="" src="./IONOS_files/inpagelayer.js"></script><script type="text/javascript" async="" src="./IONOS_files/password-indicator.js"></script><script type="text/javascript" async="" src="./IONOS_files/statuspage.js"></script><script type="text/javascript" async="" src="./IONOS_files/pushnotifications.js"></script><script type="text/javascript" async="" src="./IONOS_files/welcome-tour.js"></script><script type="text/javascript" async="" src="./IONOS_files/t.js"></script><script type="text/javascript" async="" src="./IONOS_files/bundle.min.js"></script><script type="text/javascript" id="oaotag" async="async" defer="defer" src="./IONOS_files/controlpanel-webhosting.js">
+    </script>
+
+    
+    <script type="text/javascript" async="async" defer="defer" src="./IONOS_files/exos.min.js"></script>
+    <link rel="stylesheet" href="./IONOS_files/exos.min.css">
+
+    
+    
+      <script type="module" id="ai-init" defer="defer" src="./IONOS_files/ai-assist.js" data-exos-theme="ionos" data-token="7a59da1c-64e2-4b5f-8ffc-a1ab5c5381e5" data-visitid="iv-1-700ee484-3c73-40be-abc6-c0357cebdb9e" data-fs="eace0c2f-887a-46be-ae80-3fb0c3b0afed" data-locale="en_US" data-page="webspace-explorer" data-contact="https://my.ionos.com/support/contact" data-pre-1-label="Email" data-pre-1-txt="How can I add my email address to Outlook?" data-pre-2-label="Domain" data-pre-2-txt="How can I connect my domain to MyWebsite?" data-pre-3-label="Hosting" data-pre-3-txt="How can I change the default SSH port?" data-cookie-id="pet-v1-bbaa9c69-991d-4271-91f5-27f53d70a841">
+      </script>
+      <link rel="stylesheet" href="./IONOS_files/ai-assist.css">
+    
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://my.ionos.com/webhosting/images/favicon/favicon.ico">
+    <link rel="icon" type="image/svg+xml" href="https://my.ionos.com/webhosting/images/favicon/favicon.svg">
+    <link rel="apple-touch-icon" href="https://my.ionos.com/webhosting/images/favicon/apple-touch-icon.png">
+    <link rel="mask-icon" href="https://my.ionos.com/webhosting/images/favicon/safari-pinned-tab.svg" color="#0B2A63">
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="_csrf" content="ZliqvKOWVIjHwKCUdXBMUqdKsjIy6x5ZKqP0KH941MMyArvMBznPisD3Yb3qpMX1TV14MJVznwtX2i10GseXG0cc4vcLMd6p">
+    <meta name="_csrf_header" content="X-CSRF-TOKEN">
+
+    
+
+  
+
+    <script src="./IONOS_files/bundle.tracing.min.js"></script>
+
+    <script nonce="">
+      /*<![CDATA[*/
+      (function () {
+        var userId = "563329db74d1853d683fd851c8effa2a" || false;
+        if (window.Sentry) {
+          Sentry.init({
+            dsn: "https:\/\/3e13dcb9a6334c36ad587afc892d56a1@sentry.ionos.com\/16",
+            release: "cp-webhosting" + '@' + "1.9.45",
+            integrations: [new Sentry.Integrations.BrowserTracing()],
+            tracesSampleRate: 0.05,
+            sampleRate: 0.25,
+            maxBreadcrumbs: 25.0,
+            environment: "production",
+            denyUrls: [
+              /extensions\//i,
+              /^chrome:\/\//i,
+              /^safari-extension:\/\//i,
+            ]
+          });
+          Sentry.setTag('tenant', "IONOS_US");
+          Sentry.configureScope(function (scope) {
+            var pageName = "webspace-explorer";
+            if (pageName) {
+              scope.setTransactionName(pageName);
+            }
+          });
+          if (userId) {
+            Sentry.setUser({id: userId});
+          }
+        }
+      }());
+      /*]]>*/
+    </script>
+
+  
+
+
+    <link rel="stylesheet" href="./IONOS_files/codemirror.min.css">
+    <link rel="stylesheet" href="./IONOS_files/monokai.min.css">
+    <style type="text/css">
+#code-area {
+  min-height: 360px;
+  position: relative;
+  z-index: 1;
+}
+.disabled {
+  pointer-events: none;
+}
+.CodeMirror{
+  height: 500px;
+}
+#file-editor.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+.loading-square {
+  z-index: 5;
+}
+</style>
+  <link type="text/css" rel="stylesheet" href="./IONOS_files/welcome-tour.css"><link type="text/css" rel="stylesheet" href="./IONOS_files/inpagelayer.css"><link type="text/css" rel="stylesheet" href="./IONOS_files/navigation.css"><script type="text/javascript" src="./IONOS_files/clike.min.js"></script><script type="text/javascript" src="./IONOS_files/htmlmixed.min.js"></script><script type="text/javascript" src="./IONOS_files/css.min.js"></script><script type="text/javascript" src="./IONOS_files/javascript.min.js"></script><script type="text/javascript" src="./IONOS_files/xml.min.js"></script><script type="text/javascript" src="./IONOS_files/php.min.js"></script><script type="text/javascript" nonce="">
+            (function (sCDN, sCDNProject, sCDNWorkspace, sCDNVers) {
+                if (
+                    window.localStorage !== null &&
+                    typeof window.localStorage === "object" &&
+                    typeof window.localStorage.getItem === "function" &&
+                    window.sessionStorage !== null &&
+                    typeof window.sessionStorage === "object" &&
+                    typeof window.sessionStorage.getItem === "function"
+                ) {
+                    sCDNVers =
+                        window.sessionStorage.getItem("jts_preview_version") ||
+                        window.localStorage.getItem("jts_preview_version") ||
+                        sCDNVers;
+                }
+                window.jentis = window.jentis || {};
+                window.jentis.config = window.jentis.config || {};
+                window.jentis.config.frontend = window.jentis.config.frontend || {};
+                window.jentis.config.frontend.cdnhost = sCDN + "/get/" + sCDNWorkspace + "/web/" + sCDNVers + "/";
+                window.jentis.config.frontend.vers = sCDNVers;
+                window.jentis.config.frontend.env = sCDNWorkspace;
+                window.jentis.config.frontend.project = sCDNProject;
+                window._jts = window._jts || [];
+                var f = document.getElementsByTagName("script")[0];
+                var j = document.createElement("script");
+                j.async = true;
+                j.src = window.jentis.config.frontend.cdnhost + "48gpcp.js";
+                f.parentNode.insertBefore(j, f);
+            })("https://54ft7i.ionos.com", "ionos_com", "live", "_");
+        </script><script src="./IONOS_files/ionos-datalayer.min.umd.js"></script><link type="text/css" rel="stylesheet" href="./IONOS_files/password-indicator.css"><link rel="stylesheet" type="text/css" href="./IONOS_files/bundle.css"><script type="text/javascript" src="./IONOS_files/bundle-modern.js"></script><link type="text/css" rel="stylesheet" href="./IONOS_files/statuspage.css"><script src="./IONOS_files/js"></script><script async="" class="ct_clicktrue_90021" src="./IONOS_files/ca06d1dce9f2080d34646010859966ac.js" data-ch="ionos" data-jsonp="onCheqResponse"></script><script src="./IONOS_files/web-vitals.attribution.iife.js"></script><script id="performance-script" async="" src="./IONOS_files/tagManagerIntegration.min.js"></script><script type="text/javascript" async="" src="./IONOS_files/f.txt" nonce=""></script><script async="" src="./IONOS_files/bowser-2.11.0-es5.js"></script><script async="" src="./IONOS_files/web-vitals-5.0.3.iife.js"></script><script src="https://www.googletagmanager.com/gtag/js?id=DC-13183894"></script></head>
+
+  <body class="oao-pi-nolayer oao-pi-with-navigation">
+    
+    <a id="top" href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer/edit-file?file=index.php&amp;path=%2Fverified%2Fbackend%2Fpublic#main-content" class="sr-only" aria-label="Skip to main content"></a>
+
+    
+    
+
+    
+
+    <div class="page-content"><span class="page-transition__indicator-bar"></span>
+      
+      
+        
+
+    <div class="oao-navi-navigation oao-navi-light oao-navi-finished oao-navi-items-right-5" role="banner">
+      <div class="oao-navi-top"></div><div class="oao-navi-left">
+        <div class="oao-navi-application-name"><nav role="navigation" aria-label="Primary"><ul class="oao-navi-sub-left"><li class="oao-navi-flyout-container oao-navi-flyout-application_switch " role="menu"><a class="oao-navi-flyout-item oao-navi-app-name" href="https://navigation.ionos.com/2.0/navi/US/track/click?url=https%3A%2F%2Fmy.ionos.com%2Fproduct-overview&amp;linkid=appswitch.logo&amp;c=CONTROL_PANEL_HOSTING&amp;p=webspace-explorer&amp;ft=eace0c2f-887a-46be-ae80-3fb0c3b0afed" tabindex="-1" aria-label="Home"><span class="oao-navi-app-logo" tabindex="0"></span><span class="oao-navi-app-name-span" tabindex="0" id="oao-application_switch" role="button" aria-label="Open Menu" aria-haspopup="true" aria-expanded="false">Menu</span></a></li></ul></nav>
+        </div>
+      </div>
+    <div class="oao-navi-center"><ul role="menu"><li class="oao-navi-flyout-container oao-navi-flyout-search oao-navi-flyout-search-big" role="menu"><div class="oao-navi-simple-tooltip" style="top: 80px; right: 549px;">Solution finder</div><div class="oao-navi-search-container"><a class="oao-navi-flyout-item" id="oao-search-big" role="button" tabindex="0" aria-label="Open search" aria-haspopup="true" aria-expanded="false"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" id="oao-navi-search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" xml:space="preserve" aria-hidden="true" focusable="false">
+<g id="dark">
+	<path class="oao-navi-icon-main" d="M25.7,24.1l-8.2-8.6c1.2-1.6,2-3.6,2-5.8c0-5.4-4.4-9.7-9.7-9.7S0,4.4,0,9.7
+		s4.4,9.7,9.7,9.7c2.4,0,4.6-0.9,6.3-2.3l8.2,8.5c0.2,0.2,0.5,0.3,0.8,0.3s0.5-0.1,0.8-0.3C26.1,25.3,26.1,24.6,25.7,24.1z
+		 M9.7,17.3c-4.2,0-7.5-3.4-7.5-7.5c0-4.2,3.4-7.5,7.5-7.5c4.2,0,7.5,3.4,7.5,7.5C17.3,13.9,13.9,17.3,9.7,17.3z"></path>
+	<path class="oao-navi-icon-fill" d="M25.7,24.1l-8.2-8.6c1.2-1.6,2-3.6,2-5.8c0-5.4-4.4-9.7-9.7-9.7S0,4.4,0,9.7
+		s4.4,9.7,9.7,9.7c2.4,0,4.6-0.9,6.3-2.3l8.2,8.5c0.2,0.2,0.5,0.3,0.8,0.3s0.5-0.1,0.8-0.3C26.1,25.3,26.1,24.6,25.7,24.1z"></path>
+</g>
+</svg>
+</a><div class="oao-navi-input-container oao-navi-speech" id="oao-navi-speech-big"><label class="oao-navi-search-label" for="search-input-label-big">Search for features, domains, and help</label><i class="oao-navi-search-icon"></i><input class="oao-navi-search-input" type="search" id="search-input-label-big" placeholder="Search for features, domains, and help" autocomplete="off" aria-label=""><i class="oao-navi-search-mic" tabindex="0" aria-label="Turn on microphone" role="button"></i></div></div></li></ul></div><div class="oao-navi-right"><nav role="navigation" aria-label="Secondary"><ul class="oao-navi-sub" role="menu"><li class="oao-navi-flyout-container oao-navi-flyout-search oao-navi-flyout-search-small" role="menu"><div class="oao-navi-simple-tooltip">Solution finder</div><div class="oao-navi-search-container"><a class="oao-navi-flyout-item" id="oao-search-small" role="button" tabindex="0" aria-label="Open search" aria-haspopup="true" aria-expanded="false"><!--?xml version="1.0" encoding="utf-8"?-->
+<svg version="1.1" id="oao-navi-search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 26 26" xml:space="preserve" aria-hidden="true" focusable="false">
+<g id="dark">
+	<path class="oao-navi-icon-main" d="M25.7,24.1l-8.2-8.6c1.2-1.6,2-3.6,2-5.8c0-5.4-4.4-9.7-9.7-9.7S0,4.4,0,9.7
+		s4.4,9.7,9.7,9.7c2.4,0,4.6-0.9,6.3-2.3l8.2,8.5c0.2,0.2,0.5,0.3,0.8,0.3s0.5-0.1,0.8-0.3C26.1,25.3,26.1,24.6,25.7,24.1z
+		 M9.7,17.3c-4.2,0-7.5-3.4-7.5-7.5c0-4.2,3.4-7.5,7.5-7.5c4.2,0,7.5,3.4,7.5,7.5C17.3,13.9,13.9,17.3,9.7,17.3z"></path>
+	<path class="oao-navi-icon-fill" d="M25.7,24.1l-8.2-8.6c1.2-1.6,2-3.6,2-5.8c0-5.4-4.4-9.7-9.7-9.7S0,4.4,0,9.7
+		s4.4,9.7,9.7,9.7c2.4,0,4.6-0.9,6.3-2.3l8.2,8.5c0.2,0.2,0.5,0.3,0.8,0.3s0.5-0.1,0.8-0.3C26.1,25.3,26.1,24.6,25.7,24.1z"></path>
+</g>
+</svg>
+</a><div class="oao-navi-input-container oao-navi-speech" id="oao-navi-speech-small"><label class="oao-navi-search-label" for="search-input-label-small">Search for features, domains, and help</label><button class="oao-navi-search-icon" role="button" aria-label="Close search" tabindex="0"></button><input class="oao-navi-search-input" type="search" id="search-input-label-small" placeholder="Search for features, domains, and help" autocomplete="off" aria-label=""><i class="oao-navi-search-mic" tabindex="0" aria-label="Turn on microphone" role="button"></i></div></div></li><li class="oao-navi-flyout-container oao-navi-flyout-support " role="menu"><div class="oao-navi-simple-tooltip">Help &amp; contact</div><a class="oao-navi-flyout-item" id="oao-support" data-target-id="oao-navi-support-button" aria-label="Help &amp; contact" tabindex="0" role="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 26 26" aria-hidden="true" focusable="false">
+	<path class="oao-navi-icon-fill" d="M1.7,25.5c-0.5,0-0.8-0.3-0.9-0.4c-0.3-0.4-0.4-0.9-0.1-1.5C1.5,21.4,2.4,19,2.8,18c-0.1-0.1-0.2-0.3-0.3-0.4
+	c-1.3-1.8-2-3.8-2-6c0-6.1,5.6-11,12.5-11c7,0,12.5,4.8,12.5,11c0,6.1-5.6,11-12.5,11c-1.5,0-2.7-0.2-3.7-0.5C9.2,22,9,22,8.9,21.9
+	c-0.6,0.3-2,1-3,1.5c-2.6,1.4-3.4,1.8-3.7,1.9C2,25.4,1.9,25.5,1.7,25.5z"></path>
+	<g class="oao-navi-icon-main">
+		<path class="oao-navi-icon-invert" d="M12.9,13.3c-0.6,0-1.1-0.5-1.1-1.1c0-1.7,1.1-2.5,1.4-2.7c0.6-0.4,0.8-0.8,0.8-1c0-0.6-0.2-0.8-0.2-0.8
+			c-0.3-0.2-0.7-0.3-0.8-0.3c-0.8,0-1,0.4-1.1,0.7c-0.1,0.6-0.7,1-1.2,0.9s-1-0.6-0.9-1.2C9.9,7,10.7,5.3,13,5.3c0.2,0,1.4,0,2.4,0.9
+			c0.4,0.4,0.9,1.1,0.9,2.3c0,0.7-0.3,1.8-1.7,2.8c-0.1,0.1-0.5,0.3-0.5,0.9C14,12.8,13.6,13.3,12.9,13.3z"></path>
+		<path class="oao-navi-icon-invert" d="M13,17.7c0.7,0,1.2-0.5,1.2-1.2s-0.5-1.2-1.2-1.2s-1.2,0.5-1.2,1.2S12.3,17.7,13,17.7z"></path>
+		<path d="M1.2,26c-0.5,0-0.8-0.3-1-0.4c-0.3-0.4-0.4-1-0.1-1.5c0.9-2.3,1.8-4.8,2.2-5.8c-0.1-0.1-0.2-0.3-0.3-0.4
+			c-1.4-1.9-2-4-2-6.2C0,5.2,5.8,0.1,13,0.1c7.3,0,13,5,13,11.5C26,17.8,20.2,23,13,23c-1.6,0-2.8-0.2-3.9-0.5
+			c-0.1,0-0.2-0.1-0.4-0.1c-0.6,0.3-2.1,1-3.1,1.6c-2.7,1.4-3.5,1.8-3.8,1.9C1.6,25.9,1.4,26,1.2,26z M13,2.2
+			c-5.9,0-10.8,4.3-10.8,9.3c0,1.8,0.5,3.5,1.6,5C4,16.7,4.2,17,4.4,17.2c0.5,0.5,0.5,0.6-1.4,5.7c0.6-0.3,1.2-0.6,1.7-0.9
+			c4-2.1,4-2.1,4.6-1.8c0.2,0.1,0.4,0.2,0.6,0.2c0.9,0.3,1.8,0.4,3.2,0.4c5.9,0,10.8-4.3,10.8-9.3C23.8,6.3,19.1,2.2,13,2.2z"></path>
+	</g>
+</svg>
+</a></li><li class="oao-navi-flyout-container oao-navi-flyout-cart " role="menu"><div class="oao-navi-simple-tooltip">Add product</div><a class="oao-navi-flyout-item" href="https://my.ionos.com/add-product?utm_source=global_navigation&amp;utm_medium=notification&amp;utm_campaign=cart&amp;utm_content=cp-add-product" aria-label="Empty cart" data-testid="globalNavigationBasket"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path class="oao-navi-icon-fill" d="M19.7,24.5h-14c-2.8,0-5-2.2-5-5v-14c0-2.8,2.2-5,5-5h14c2.8,0,5,2.2,5,5v14C24.7,22.3,22.5,24.5,19.7,24.5z"></path><g class="oao-navi-icon-main"><path d="M20.6,26H5.4c-3,0-5.4-2.4-5.4-5.4V5.4C0,2.4,2.4,0,5.4,0h15.2c3,0,5.4,2.4,5.4,5.4v15.2C26,23.6,23.6,26,20.6,26zM5.4,2.2c-1.8,0-3.2,1.5-3.2,3.2v15.2c0,1.8,1.5,3.2,3.2,3.2h15.2c1.8,0,3.2-1.5,3.2-3.2V5.4c0-1.8-1.5-3.2-3.2-3.2H5.4z"></path><path class="oao-navi-icon-invert" d="M18.9,12h-4.8V7.1c0-0.6-0.5-1.1-1.1-1.1s-1.1,0.5-1.1,1.1V12H7.1c-0.6,0-1.1,0.5-1.1,1.1s0.5,1.1,1.1,1.1h4.8v4.7c0,0.6,0.5,1.1,1.1,1.1s1.1-0.5,1.1-1.1v-4.7h4.8c0.6,0,1.1-0.5,1.1-1.1C19.9,12.5,19.5,12,18.9,12z"></path></g></svg></a></li><li class="oao-navi-flyout-container oao-navi-flyout-notification  oao-navi-with-badge" role="menu"><div class="oao-navi-simple-tooltip">Notifications</div><a class="oao-navi-flyout-item" id="oao-notification" aria-label="Open preview of 5 messages" aria-haspopup="true" aria-expanded="false" tabindex="0" role="button"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 26 26" aria-hidden="true" focusable="false"><path class="oao-navi-icon-fill" d="M21.4,14.9C21.4,14.9,21.4,14.9,21.4,14.9c-1.6-1.1-1.5-2-1.2-3.7c0.1-0.6,0.2-1.3,0.2-2V8.6c0-2.8-3-4.5-6-5c-0.1,0-0.2,0-0.4,0l-2,0c-0.1,0-0.2,0-0.2,0c-3,0.5-6.1,2.2-6.1,5v0.7c0,0.7,0.1,1.4,0.2,2c0.2,1.7,0.4,2.6-1.2,3.7c-2.9,2.1-2.3,5.1-2.3,5.2c0.1,0.5,0.5,0.8,1,0.8h19.5c0.5,0,0.9-0.3,1-0.8C23.7,20,24.3,17,21.4,14.9z"></path><g class="oao-navi-icon-main"><path d="M22.2,14.9C22.2,14.9,22.2,14.9,22.2,14.9c-1.8-1.2-1.6-2.1-1.4-3.9c0.1-0.6,0.2-1.4,0.2-2.1V8.2c0-2.9-3.3-4.8-6.6-5.3c-0.1,0-0.2,0-0.4,0V1.1C14,0.5,13.5,0,12.9,0s-1.1,0.5-1.1,1.1v1.8c-0.1,0-0.2,0-0.3,0C8.3,3.5,5,5.3,5,8.2v0.7c0,0.8,0.1,1.5,0.2,2.1c0.3,1.7,0.4,2.7-1.4,3.9c-3.2,2.2-2.5,5.3-2.5,5.5c0.1,0.5,0.5,0.9,1.1,0.9h21.3c0.5,0,1-0.4,1.1-0.9C24.7,20.3,25.4,17.1,22.2,14.9z M3.4,19.1c0.1-0.7,0.5-1.6,1.6-2.4c2.9-1.9,2.6-4.1,2.3-6c-0.1-0.6-0.2-1.2-0.2-1.8V8.2c0-1.6,2.4-2.8,4.8-3.1c0.4-0.1,1.7-0.1,1.9,0c0,0,0.1,0,0.1,0c2.4,0.4,4.8,1.6,4.8,3.1v0.7c0,0.6-0.1,1.2-0.2,1.8c-0.3,1.9-0.6,4,2.3,6c1.1,0.8,1.5,1.7,1.6,2.4L3.4,19.1L3.4,19.1z"></path><path d="M11.4,23.5c-0.1,0.2-0.2,0.5-0.2,0.7c0,1,0.8,1.8,1.7,1.8s1.7-0.8,1.7-1.8c0-0.3-0.1-0.5-0.2-0.7H11.4z"></path></g></svg><sup class="oao-navi-notification" aria-hidden="true">5+</sup></a></li><li class="oao-navi-flyout-container oao-navi-flyout-customer " role="menu"><div class="oao-navi-simple-tooltip">My account &amp; logout</div><a class="oao-navi-flyout-item" id="oao-customer" tabindex="0" role="button" aria-label="Open my account &amp; logout" aria-haspopup="true" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 26 26" aria-hidden="true" focusable="false">
+<path class="oao-navi-icon-fill" d="M12.9,26c-5.3,0-11.4-1.3-11.5-5c0-2.3,2.5-3.1,3.4-3.5l0.2-0.1c2.4-0.9,3-1.3,3.8-1.9c0.1-0.1,0.2-0.3,0.2-0.4
+	c-0.8-0.8-1-2.4-1.1-3.3c-0.7-0.5-1-1.4-1.1-2.8l0,0c0,0,0,0.1,0-0.1c0-0.4-0.1-1.4,0.6-2c-0.1-1-0.1-2.3-0.1-2.6
+	C7.5,1.2,10.3,0,12.9,0c0,0,0.1,0,0.1,0h0.1c3.2,0,5.4,1.7,5.5,4.3c0,0.3,0,1.6-0.1,2.6c0.7,0.6,0.6,1.6,0.6,2c0,0,0,0.1,0,0.1
+	c-0.1,1.4-0.5,2.3-1.1,2.8c-0.1,0.9-0.3,2.5-1.1,3.3c0,0.2,0,0.3,0.2,0.4c0.8,0.6,1.5,1,3.8,1.9l0.2,0.1c0.9,0.3,3.4,1.2,3.4,3.5
+	c0,3.7-6.1,5-11.4,5c0,0,0,0,0,0L12.9,26C13,26,13,26,12.9,26z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7
+	L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z
+	 M7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7
+	L7.2,9.7z M7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z M7.2,9.6L7.2,9.6L7.2,9.6z M7.2,9.6L7.2,9.6L7.2,9.6z
+	 M7.1,9.6L7.1,9.6L7.1,9.6z M7.1,9.6L7.1,9.6L7.1,9.6z M7.1,9.6L7.1,9.6L7.1,9.6z"></path>
+<path class="oao-navi-icon-main" d="M13,26c-5.3,0-11.4-1.3-11.5-5c0-2.3,2.4-3.1,3.4-3.5l0.2-0.1c2.4-0.9,3-1.3,3.8-1.9c0.1-0.1,0.2-0.3,0.2-0.4
+	c-0.8-0.8-1-2.4-1.1-3.3c-0.7-0.5-1-1.4-1.1-2.8l0,0c0,0,0,0.1,0-0.1c0-0.4-0.1-1.4,0.6-2C7.4,6,7.4,4.7,7.4,4.4
+	C7.5,1.2,10.3,0,12.9,0c0,0,0.1,0,0.1,0h0.1c3.2,0,5.4,1.7,5.5,4.3c0,0.3,0,1.6-0.1,2.6c0.7,0.6,0.6,1.6,0.6,2c0,0,0,0.1,0,0.1
+	c-0.1,1.4-0.5,2.3-1.1,2.8c-0.1,0.9-0.3,2.5-1.1,3.3c0,0.2,0,0.3,0.2,0.4c0.8,0.6,1.5,1,3.8,1.9l0.2,0.1c0.9,0.3,3.4,1.2,3.4,3.5
+	c0,3.7-6.1,5-11.4,5c0,0,0,0,0,0L13,26C13,26,13,26,13,26z M12.9,23.8c0,0,0.1,0,0.2,0s0,0,0,0c5.7,0,9.2-1.5,9.3-2.9l0,0
+	c0-0.7-1.4-1.2-1.9-1.4l-0.3-0.1c-2.4-0.9-3.2-1.4-4.3-2.1c-1.2-0.8-1.2-2.3-1-3c0.1-0.3,0.3-0.5,0.5-0.7c0.2-0.4,0.4-1.6,0.5-2.5
+	c0-0.5,0.3-0.9,0.8-1c0,0,0.2-0.1,0.3-1.2c0-0.1,0-0.1,0-0.2c-0.4-0.2-0.7-0.6-0.7-1c0-0.1,0-0.1,0-0.2l0,0c0.1-0.6,0.1-2.2,0.1-3.2
+	c-0.1-1.9-2.1-2.2-3.4-2.2c0,0-0.1,0-0.1,0c-1.3,0-3.3,0.4-3.4,2.3c0,0.9,0,2.6,0.1,3.2l0,0c0,0.1,0,0.1,0,0.2c0,0.4-0.3,0.8-0.7,1
+	c0,0.1,0,0.1,0,0.2c0.1,1.1,0.3,1.2,0.3,1.2c0.5,0.1,0.8,0.6,0.8,1c0,0.8,0.2,2.1,0.5,2.4c0.3,0.1,0.5,0.4,0.5,0.7
+	c0.2,0.7,0.2,2.2-1,3c-1,0.7-1.9,1.2-4.3,2.1l-0.3,0.1C5,19.8,3.7,20.3,3.7,21C3.7,22.4,7.2,23.9,12.9,23.8z M7.2,9.7L7.2,9.7
+	L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7
+	C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z M7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z M7.2,9.7L7.2,9.7
+	L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7C7.2,9.7,7.2,9.7,7.2,9.7z
+	 M7.2,9.7L7.2,9.7L7.2,9.7z M7.2,9.7L7.2,9.7L7.2,9.7z M7.1,9.6L7.1,9.6L7.1,9.6z M7.1,9.6L7.1,9.6L7.1,9.6z M7.1,9.6L7.1,9.6
+	L7.1,9.6z"></path>
+</svg>
+</a></li></ul></nav></div></div>
+
+  
+      
+
+      
+      <main id="main-content" role="main" data-iframe-height=" ">
+        
+        
+
+        
+        
+
+        
+        
+        
+
+  <header class="page-header page-header--narrow">
+    <div class="page-header__block">
+      
+  <nav aria-label="Navigation" class="breadcrumb">
+
+    
+    <a class="breadcrumb__item" data-testid="link--bc-home" title="Home" href="https://my.ionos.com/home/products">Home</a>
+
+    
+    
+    
+    
+
+    
+    
+    
+
+    
+    
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+        
+  <a class="breadcrumb__item" href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/" data-testid="link--bc-project" title="IONOS Business Package">IONOS Business Package</a>
+
+        <a class="breadcrumb__item" data-testid="link--bc-webspace-explorer" href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer?path=/verified/backend/public" title="Webspace Explorer">Webspace Explorer</a>
+      
+
+      
+
+      
+    
+
+    
+    
+    
+    
+  </nav>
+
+
+      <a href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer?path=/verified/backend/public" class="page-header__back-button"></a>
+      <h1 class="page-header__headline">Edit file</h1>
+      <h2 class="page-header__headline page-header__headline--sub file-name">index.php</h2>
+    </div>
+  </header>
+
+  <section class="page-section page-section--narrow">
+    <div class="page-section__block">
+
+      <div class="sheet hidden" id="save-success">
+        <section class="sheet__section sheet__section--success">
+          <h4 class="headline headline--sub headline--success">
+            <span class="file-name">index.php</span>
+            <span>saved successfully. You will be redirected to main page.</span>
+          </h4>
+        </section>
+      </div>
+      <div class="sheet errors hidden">
+        <section class="sheet__section sheet__section--critical">
+            <h4 class="headline headline--sub headline--critical hidden" id="save-error">There was a problem saving the file.</h4>
+            <h4 class="headline headline--sub headline--critical hidden" id="load-error">There was a problem loading the file.</h4>
+            <p class="paragraph">Please try again later.</p>
+        </section>
+      </div>
+      <div id="file-editor" class="" style="background: #fff;box-shadow: 0 1px 2px 0 rgba(80,87,91,.13)">
+        <textarea class="input-textarea" id="code-area" style="display: none;">File is loading …</textarea><div class="CodeMirror cm-s-default" translate="no" style="clip-path: inset(0px);"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 344px; left: 472.391px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; min-height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -15px; border-right-width: 35px; min-height: 428px; min-width: 698.25px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like">x</pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 442.391px; top: 340px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-meta">&lt;?php</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Illuminate\Foundation\Application</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">use</span> <span class="cm-variable">Illuminate\Http\Request</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-builtin">define</span>(<span class="cm-string">'LARAVEL_START'</span>, <span class="cm-builtin">microtime</span>(<span class="cm-atom">true</span>));</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Determine if the application is in maintenance mode...</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">if</span> (<span class="cm-builtin">file_exists</span>(<span class="cm-variable-2">$maintenance</span> <span class="cm-operator">=</span> <span class="cm-atom">__DIR__</span>.<span class="cm-string">'/../storage/framework/maintenance.php'</span>)) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">    <span class="cm-keyword">require</span> <span class="cm-variable-2">$maintenance</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">}</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Register the Composer autoloader...</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">require</span> <span class="cm-atom">__DIR__</span>.<span class="cm-string">'/../vendor/autoload.php'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">// Bootstrap Laravel and handle the request...</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/** @var Application $app */</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">$app</span> <span class="cm-operator">=</span> <span class="cm-keyword">require_once</span> <span class="cm-atom">__DIR__</span>.<span class="cm-string">'/../bootstrap/app.php'</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable-2">$app</span><span class="cm-operator">-&gt;</span><span class="cm-variable">handleRequest</span>(<span class="cm-variable">Request</span>::<span class="cm-variable">capture</span>());</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 35px; width: 1px; border-bottom: 0px solid transparent; top: 428px;"></div><div class="CodeMirror-gutters" style="height: 463px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+      </div>
+
+      <div style="margin-top: 16px;">
+        <div class="grid">
+          <div class="grid-col grid-col--8">
+            <a href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer/edit-file?file=index.php&amp;path=%2Fverified%2Fbackend%2Fpublic#" id="save-file" class="button button--primary button--with-loader" role="button" tabindex="0">Save</a>
+            <a href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer/?path=/verified/backend/public" class="button">Cancel</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<script nonce="">
+/*<![CDATA[*/
+var OAO = OAO || {};
+OAO.inline = OAO.inline || {};
+OAO.inline.projectId = "c5e1dbb7-e605-438f-8139-996e4321f7eb";
+/*]]>*/
+</script>
+
+<script type="text/javascript" src="./IONOS_files/codemirror.min.js"></script>
+<script type="text/javascript" src="./IONOS_files/matchbrakets.min.js"></script>
+<script type="text/javascript" src="./IONOS_files/edit-file.js"></script>
+
+
+        
+        <a href="https://my.ionos.com/webhosting/c5e1dbb7-e605-438f-8139-996e4321f7eb/webspace-explorer/edit-file?file=index.php&amp;path=%2Fverified%2Fbackend%2Fpublic#top" class="sr-only" aria-label="Back to top of the page"></a>
+      </main>
+    </div>
+
+    
+    
+      
+
+    
+    
+
+    
+    <footer class="page-footer" role="contentinfo">
+      <div class="page-footer__block">
+        
+        
+
+    <section class="page-footer__section grid">
+
+      
+      <div class="grid-col grid-col--3 grid-col--small-12">
+        <div class="page-footer__adzone">
+          <div class="ias-zone" data-ias-zoneid="hcc_footer_banner" id="ias.zone0" data-medium-id="FOOTER_TILE_DOMAIN" data-content-medium-id="FOOTER_TILE_DOMAIN" data-medium-variant="BKS" data-content-medium-variant="BK"><div>
+    <h4 class="page-footer__headline">
+        Our recommendation for you
+    </h4>
+
+
+<a class="tile tile--horizontal tile--inlinee " style="grid-template-areas: &quot;visual label&quot;" href="https://ias.ionos.com/ias/follow/CLICK?ias_source=CONTROL_PANEL_HOSTING-US&amp;ias_medium=webspace-explorer-hcc_footer_banner&amp;ias_content=FOOTER_TILE_DOMAIN-BKS&amp;ias_campaign=DOMAIN&amp;feId=eace0c2f-887a-46be-ae80-3fb0c3b0afed&amp;tzO=%2B5.5&amp;iasSessionId=77d0e447-2724-467e-a221-34092d0b340f&amp;target=https%3A%2F%2Fmy.ionos.com%2Fdomainshop%2Fsearch%3Fmc%3DDIEO4V7Z%26utm_source%3Dfooter%26utm_medium%3Dcard%26utm_campaign%3Drelaunch%26utm_content%3Ddomain" target="_top">
+    
+    <img class="tile__image" alt="icon" src="./IONOS_files/domains-generic.svg">
+    
+    <span class="tile__label tile__label--font-size " style="margin-bottom: 0; margin-top: 0;">
+        Build your brand on a great domain
+    </span>
+</a>
+
+<style>
+    .pe-footer-background {
+        background: #0b2a63;
+    }
+
+    .pe-footer-background:hover {
+        background: #001b41;
+    }
+
+    .pe-footer-text {
+        color: #FFF;
+    }
+  .tile__label--font-size {
+    font-size: 14px;
+  }
+</style>
+    
+</div></div>
+        </div>
+      </div>
+
+      <div class="grid-col grid-col--6 grid-col--small-12">
+
+        <div class="grid">
+
+          
+          <div class="grid-col grid-col--6">
+            <h4 class="page-footer__headline headline--ellipsized">My IONOS</h4>
+            <ul class="page-footer__link-list">
+              <li>
+                <a class="page-footer__link link--ellipsized link--exos-icon exos-icon-home-24" href="https://my.ionos.com/home/products?linkId=ft.nav.home">Home</a>
+              </li>
+              <li>
+                <a class="page-footer__link link--ellipsized link--exos-icon exos-icon-myaccount-64" href="https://my.ionos.com/account/?linkId=ft.nav.my-account">My account</a>
+              </li>
+              <li>
+                
+                <a class="page-footer__link link--ellipsized" href="https://my.ionos.com/home/add-product?linkId=ft.nav.discover-ionos">
+                  <svg class="svg-icon" viewBox="0 0 16 16">
+                    <g>
+                      <path d="M10.98,4.81c0.34,0,0.67,0.04,0.99,0.1v-3.9c0-0.55-0.45-1-1-1H1.01c-0.55,0-1,0.45-1,1v9.96c0,0.55,0.45,1,1,1h4c-0.07-0.32-0.1-0.66-0.1-1C4.92,6.13,8.7,4.81,10.98,4.81z"></path>
+                      <path d="M11.97,6.11c-0.32-0.06-0.65-0.1-0.99-0.1c-2.74,0-4.97,2.22-4.97,4.97c0,0.34,0.03,0.67,0.1,1c0.46,2.26,2.46,3.97,4.86,3.97c2.74,0,4.97-2.22,4.97-4.97C15.95,8.57,14.24,6.57,11.97,6.11z M14.4,11.57l-2.9,0v2.8c0,0.27-0.21,0.48-0.48,0.48c-0.27,0-0.55-0.21-0.55-0.48v-2.8l-2.83,0c-0.27,0-0.48-0.31-0.48-0.58c0-0.27,0.21-0.58,0.48-0.58l2.8,0v-2.8c0-0.27,0.32-0.48,0.58-0.48c0.27,0,0.48,0.22,0.48,0.48v2.8l2.9,0c0.27,0,0.48,0.32,0.48,0.58C14.88,11.26,14.67,11.57,14.4,11.57z"></path>
+                    </g>
+                  </svg><span>Discover IONOS</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          
+          <div class="grid-col grid-col--6 grid-col--small-spacing-right">
+            <h4 class="page-footer__headline headline--ellipsized">Service</h4>
+            <ul class="page-footer__link-list">
+              <li>
+                <a class="page-footer__link link--ellipsized" target="_blank" href="https://www.ionos.com/help/?hc=Control-Center&amp;linkId=ft.nav.help">Help Center</a>
+              </li>
+              <li>
+                <a class="page-footer__link link--ellipsized" href="https://my.ionos.com/support/contact?linkId=ft.nav.contact">Contact us / My personal consultant</a>
+              </li>
+              
+              
+            </ul>
+          </div>
+        </div>
+
+        
+        <h4 class="page-footer__headline headline--ellipsized">Download the IONOS App</h4>
+        <div class="grid">
+          
+          <div class="grid-col grid-col--6">
+            <a class="page-footer__appstore tooltip" data-tooltip="The IONOS App is available on Google Play" target="_blank" href="https://play.google.com/store/apps/details?id=com.oneandone.ciso.mobile.app.android&amp;referrer=utm_source%3Dcp%26utm_campaign%3Dfooter" aria-label="Google Play">
+              <img src="./IONOS_files/googleplay-en.svg" height="44" width="auto" alt="Google Play" loading="lazy">
+            </a>
+          </div>
+          
+          <div class="grid-col grid-col--6 grid-col--small-spacing-right">
+            <a class="page-footer__appstore tooltip" data-tooltip="The IONOS App is available on the App Store" target="_blank" href="https://apps.apple.com/app/apple-store/id1080444849?pt=119330501&amp;ct=cp.footer&amp;mt=8" aria-label="App Store">
+              <img src="./IONOS_files/appstore-en.svg" height="44" width="auto" alt="App Store" loading="lazy">
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      
+      <div class="grid-col grid-col--3 grid-col--small-12">
+        <img class="page-footer__logo" src="./IONOS_files/ionos-logo.svg" alt="IONOS" loading="lazy">
+        <p class="paragraph paragraph--cropped paragraph--ellipsized">
+          <a class="page-footer__social page-footer__social--first" target="_blank" title="Instagram" aria-label="Instagram" href="https://www.instagram.com/ionos.official?linkId=ft.nav.instagram">
+            <svg class="svg-icon svg-icon--large" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path>
+            </svg>
+          </a>
+          <a class="page-footer__social" target="_blank" title="Facebook" aria-label="Facebook" href="https://ionos.ly/IONOS_FB_US?linkId=ft.nav.facebook">
+            <svg class="svg-icon svg-icon--large" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M22.676 0H1.324C.593 0 0 .593 0 1.324v21.352C0 23.408.593 24 1.324 24h11.494v-9.294H9.689v-3.621h3.129V8.41c0-3.099 1.894-4.785 4.659-4.785 1.325 0 2.464.097 2.796.141v3.24h-1.921c-1.5 0-1.792.721-1.792 1.771v2.311h3.584l-.465 3.63H16.56V24h6.115c.733 0 1.325-.592 1.325-1.324V1.324C24 .593 23.408 0 22.676 0"></path>
+            </svg>
+          </a>
+          <a class="page-footer__social" target="_blank" title="YouTube" aria-label="YouTube" href="https://ionos.ly/IONOS_YT_US?linkId=ft.nav.youtube">
+            <svg class="svg-icon svg-icon--large" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"></path>
+            </svg>
+          </a>
+          <a class="page-footer__social" target="_blank" title="LinkedIn" aria-label="LinkedIn" href="https://ionos.ly/IONOS_IN?linkId=ft.nav.linkedin">
+            <svg class="svg-icon svg-icon--large" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path>
+            </svg>
+          </a>
+          <a class="page-footer__social page-footer__social--last" target="_blank" title="TikTok" aria-label="TikTok" href="https://www.tiktok.com/@ionos.global?linkId=ft.nav.linkedin">
+            <svg class="svg-icon svg-icon--large" viewBox="0 0 512 512" aria-hidden="true">
+              <path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"></path>
+            </svg>
+          </a>
+        </p>
+        
+          <a class="page-footer__link link--exos-icon exos-icon-thumbup-32" target="_blank" href="https://ionos.aklamio.com/en-us?source=AKLA052U&amp;linkId=ft.nav.recommendation">Recommend us with Aklamio</a>
+        
+      </div>
+
+    </section>
+
+  
+        
+    <section class="page-footer__section page-footer__section--last">
+      
+      <div class="page-footer__section-item">
+        <div class="oao-statuspage-overall-status page-footer__status"><a class="oao-statuspage-overall-state-minor" target="_blank" href="https://www.ionos-status.com/?utm_medium=footer&amp;utm_content=minor&amp;utm_source=CONTROL_PANEL_HOSTING&amp;utm_campaign=webspace-explorer&amp;utm_term=no_search">Degraded Performance</a></div>
+      </div>
+      
+      <div class="page-footer__section-item page-footer__section-item--align-center page-footer__section-item--small-align-left">
+        <p class="page-footer__link">
+          © 2026
+          <a class="page-footer__link" target="_blank" href="https://www.ionos.com/about/?linkId=ft.nav.company">IONOS Inc.</a>
+        </p>
+      </div>
+      
+      <div class="page-footer__section-item page-footer__section-item--align-right page-footer__section-item--small-align-left">
+        
+        <a class="page-footer__link" target="_blank" href="https://www.ionos.com/terms-gtc/terms-privacy?linkId=ft.nav.privacy">Privacy policy</a> -
+        <a class="page-footer__link" target="_blank" href="https://www.ionos.com/terms-gtc/?linkId=ft.nav.terms">T&amp;Cs</a>
+      </div>
+    </section>
+  
+      </div>
+    </footer>
+
+  
+    
+
+    
+
+    
+      <script type="text/javascript" nonce="">
+        var OAO = OAO || {};
+        OAO.q = OAO.q || {};
+        OAO.q.c = OAO.q.c || [];
+        OAO.q.navigation = OAO.q.navigation || [];
+        OAO.q.pageintegration = OAO.q.pageintegration || [];
+        OAO.q.ias = OAO.q.ias || [];
+
+        (function () {
+          OAO.q.c.push(['setLanguage', "en_US"]);
+          OAO.q.ias.push(['setScriptNonce', "HheuzObgI0uWqSEEv3euKUqlRaTkwBz21tA4HuATGEU="]);
+          
+          OAO.q.navigation.push(['setLogoutUrl', "\/webhosting\/logout"]);
+            var frontendToken = "eace0c2f-887a-46be-ae80-3fb0c3b0afed" || false;
+            if (frontendToken) {
+              OAO.q.c.push(['setFrontendToken', frontendToken]);
+            }
+          var pageName = "webspace-explorer";
+          if (pageName) {
+            OAO.q.c.push(['setPageName', pageName]);
+          }
+          var visitId = "iv-1-700ee484-3c73-40be-abc6-c0357cebdb9e" || false;
+          OAO.q.navigation.push(['setSessionIdentifier', visitId]);
+          
+  OAO.q.navigation.push(['setProductArea', 'HOSTING']);
+
+          })();
+      </script>
+    
+
+    
+    
+
+
+    
+
+  <script type="text/javascript" nonce="">
+    var _paq = _paq || [];
+    _paq.push(['enableLinkTracking']);
+    _paq.push(['enableHeartBeatTimer']);
+    _paq.push(['trackPageView']);
+
+    (function() {
+      function loadMawa() {
+        var hn = window.location.hostname || '', start, tld;
+        start = hn.indexOf('.ionos.');
+        if (start === -1) {
+          return;
+        }
+        start = start + 7;
+        tld = hn.substr(start);
+        var u = "https://mawa.ionos." + tld + "/";
+        _paq.push(['setTrackerUrl', u + 'piwik.php']);
+        _paq.push(['setSiteId', 108]);
+        var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+        g.type = 'text/javascript';
+        g.async = true;
+        g.defer = true;
+        g.src = u + 'piwik.js';
+        s.parentNode.insertBefore(g, s);
+      }
+
+      window.OAO = window.OAO || {};
+      window.OAO.q = window.OAO.q || {};
+      window.OAO.q.privacyconsent = window.OAO.q.privacyconsent || [];
+      window.OAO.q.privacyconsent.push(['addStatisticsCallback', function(consent) {
+        loadMawa();
+      }]);
+    })();
+  </script>
+
+
+    
+
+  
+
+    <script nonce="">
+      /*<![CDATA[*/
+      OAO = OAO || {};
+      OAO.tracking = {"pagename":"webspace-explorer","market":"US","locale":"en_US","loginstatus":true,"hashedcustomernumber":"563329db74d1853d683fd851c8effa2a","siteid":"CP.WH.US","shopname":"cp-webhosting","shoptype":"Control Panel Webhosting","appversion":"1.9.45","visitid":"iv-1-700ee484-3c73-40be-abc6-c0357cebdb9e","_nonce":"HheuzObgI0uWqSEEv3euKUqlRaTkwBz21tA4HuATGEU=","actorType":"CUSTOMER"};
+      /*]]>*/
+    </script>
+
+  
+
+
+    
+  <script type="text/javascript" nonce="">
+    (function() {
+      function generateJentisScript() {
+        const jentisConfig = {
+          de: {endpoint: 'https://6zqtim.ionos.de', project: 'ionos_de', jsFile: 'aljmf5.js'},
+          uk: {endpoint: 'https://xxwre7.ionos.co.uk', project: 'ionos_co_uk', jsFile: 'akbbdz.js'},
+          us: {endpoint: 'https://54ft7i.ionos.com', project: 'ionos_com', jsFile: '48gpcp.js'},
+          ca: {endpoint: 'https://nsupig.ionos.ca', project: 'ionos_ca', jsFile: 'j05pa0.js'},
+          fr: {endpoint: 'https://948si5.ionos.fr', project: 'ionos_fr', jsFile: 'b44g5k.js'},
+          es: {endpoint: 'https://v0v7kq.ionos.es', project: 'ionos_es', jsFile: 'bp6upp.js'},
+          it: {endpoint: 'https://kt8986.ionos.it', project: 'ionos_it', jsFile: 'td7zu1.js'},
+          mx: {endpoint: 'https://e5xnsj.ionos.mx', project: 'ionos_mx', jsFile: 'tvjenp.js'},
+          at: {endpoint: 'https://6kudki.ionos.at', project: 'ionos_at', jsFile: '9t1jfx.js'},
+        };
+
+        const normalizedCountry = OAO.tracking.market.toLowerCase() || '';
+
+        if (!jentisConfig.hasOwnProperty(normalizedCountry)) {
+          throw new Error(`Jentis runtime configuration not available for country: ${normalizedCountry}`);
+        }
+
+        const jentisRuntimeConfig = jentisConfig[normalizedCountry];
+
+        // the following lines are 1:1 from Jentis
+        return `
+            (function (sCDN, sCDNProject, sCDNWorkspace, sCDNVers) {
+                if (
+                    window.localStorage !== null &&
+                    typeof window.localStorage === "object" &&
+                    typeof window.localStorage.getItem === "function" &&
+                    window.sessionStorage !== null &&
+                    typeof window.sessionStorage === "object" &&
+                    typeof window.sessionStorage.getItem === "function"
+                ) {
+                    sCDNVers =
+                        window.sessionStorage.getItem("jts_preview_version") ||
+                        window.localStorage.getItem("jts_preview_version") ||
+                        sCDNVers;
+                }
+                window.jentis = window.jentis || {};
+                window.jentis.config = window.jentis.config || {};
+                window.jentis.config.frontend = window.jentis.config.frontend || {};
+                window.jentis.config.frontend.cdnhost = sCDN + "/get/" + sCDNWorkspace + "/web/" + sCDNVers + "/";
+                window.jentis.config.frontend.vers = sCDNVers;
+                window.jentis.config.frontend.env = sCDNWorkspace;
+                window.jentis.config.frontend.project = sCDNProject;
+                window._jts = window._jts || [];
+                var f = document.getElementsByTagName("script")[0];
+                var j = document.createElement("script");
+                j.async = true;
+                j.src = window.jentis.config.frontend.cdnhost + "${jentisRuntimeConfig.jsFile}";
+                f.parentNode.insertBefore(j, f);
+            })("${jentisRuntimeConfig.endpoint}", "${jentisRuntimeConfig.project}", "live", "_");
+        `;
+      }
+
+      function insertJentisAndDatalayerScripts(callback) {
+        const scriptContent = generateJentisScript();
+        const scriptElement = document.createElement('script');
+        scriptElement.type = 'text/javascript';
+        scriptElement.innerHTML = scriptContent;
+        scriptElement.setAttribute('nonce', 'HheuzObgI0uWqSEEv3euKUqlRaTkwBz21tA4HuATGEU=');
+        document.head.appendChild(scriptElement);
+
+        // Integrate this script as early as possible right after the Jentis JavaScript library above
+        // IMPORTANT: DO NOT USE "ASYNC" - THIS SCRIPT HAS TO BE INTEGRATED AS SHOWN HERE
+        const datalayerScriptElement = document.createElement('script');
+        datalayerScriptElement.src = 'https://var.uicdn.net/shopsshort/ionos-datalayer/v1/ionos-datalayer.min.umd.js';
+        datalayerScriptElement.onload = function() {
+          if (typeof callback === 'function') {
+            callback();
+          }
+        };
+        document.head.appendChild(datalayerScriptElement);
+      }
+
+      function setupPageviewTracking() {
+        // structure of global datalayer object is fix
+        if (!window
+                || typeof window.ionos !== 'object'
+                || typeof window.ionos.datalayer !== 'object'
+                || typeof window.ionos.datalayer.initConsent !== 'function'
+                || typeof window.ionos.datalayer.pageview !== 'object'
+                || typeof window.ionos.datalayer.pageview.sendData !== 'function') {
+          return;
+        }
+
+        window.ionos.datalayer.initConsent();
+
+        // setting the properties for CP
+        const dataLayerNs = window.ionos.datalayer.pageview;
+        dataLayerNs.applicationName = OAO.tracking.shopname;
+        dataLayerNs.page = OAO.tracking.pagename;
+        dataLayerNs.loginStatus = OAO.tracking.loginstatus;
+        dataLayerNs.hashedCustomerId = OAO.tracking.hashedcustomernumber;
+
+        window.ionos.datalayer.pageview.sendData();
+      }
+
+      function setupPageviewTrackingIfConsent() {
+        // make sure privacy consent is set before executing the script
+        window.OAO.q.privacyconsent.push(['addStatisticsCallback', function (consent) {
+          setupPageviewTracking();
+        }]);
+      }
+
+      insertJentisAndDatalayerScripts(setupPageviewTrackingIfConsent);
+    }());
+  </script>
+
+
+
+    
+    
+    <script type="text/javascript" nonce="">
+      var OAO = OAO || {};
+      OAO.q = OAO.q || {};
+      OAO.q.pageintegration = OAO.q.pageintegration || [];
+
+      (function(){
+        var successMessage = document.querySelector('.page-message[level="success"]');
+        if (successMessage) {
+          var headline = successMessage.querySelector('h1, h2, h3, h4, h5, h6');
+          if (headline && headline.textContent) {
+            OAO.q.pageintegration.push(['successAndClose', headline.textContent.trim(), '']);
+          }
+        }
+        // A11Y
+        document.addEventListener("DOMContentLoaded", function() {
+          const pageMessages = document.querySelectorAll('.message--success, .message--warning, .message--critical, .message--neutral');
+          if (pageMessages.length > 0) {
+            const msg = pageMessages[0];
+            msg.setAttribute('tabindex', '-1');
+            msg.style.outline = 'none';
+            msg.focus();
+            msg.addEventListener('blur', () => {
+              msg.removeAttribute('tabindex');
+              msg.style.outline = '';
+            });
+          }
+        });
+      })();
+    </script>
+  
+
+    
+    
+    
+  
+
+
+<button id="ai-bubble" class="exos ai-bubble ai-tooltip" tabindex="0" aria-label="Hey, I’m the AI Assistant of IONOS" data-exos-theme="ionos"><svg class="ai-bubble__icon" viewBox="0 0 16 16"><path d="M14.92,1.09c-0.02,0-0.04,0-0.05,0H6.71c-0.65,0-1.18,0.52-1.18,1.17c0,0.01,0,0.01,0,0.02v2.13H9c1.37,0,2.06,0.63,2.06,1.59v2.28l3.34,2.54-1-2.54h1.44c0.64,0,1.16-0.52,1.16-1.16V2.28C16.03,1.65,15.55,1.12,14.92,1.09z"></path><path d="M9.31,4.99L9.31,4.99L1.19,4.96C0.54,4.96,0.01,5.48,0,6.13c0,0.01,0,0.01,0,0.02v4.84c0,0.64,0.52,1.16,1.16,1.16H2.6l-1.22,2.76l3.59-2.76h4.37c0.64,0.01,1.15-0.5,1.16-1.14c0-0.01,0-0.01,0-0.02V6.15C10.5,5.51,9.97,4.99,9.31,4.99z M8.99,8.11C7.51,8.39,7.28,9.82,7.28,9.82c-0.02,0.11-0.05,0.17-0.1,0.17c-0.09,0-0.12-0.17-0.12-0.17c-0.37-1.5-1.69-1.71-1.69-1.71c-0.2-0.03-0.2-0.12-0.2-0.12s0-0.07,0.2-0.12c0,0,1.32-0.21,1.69-1.71c0,0,0.03-0.17,0.12-0.17c0.05,0,0.08,0.07,0.1,0.17c0,0,0.23,1.43,1.71,1.71c0.02,0.01,0.17,0.05,0.17,0.12C9.16,8.07,9,8.11,8.99,8.11z"></path></svg><span class="ai-tooltip__element">AI Assistant</span></button><link rel="stylesheet" href="./IONOS_files/ias-styles.css" media="all"><div class="ias-zone" data-ias-zoneid="hcc_flyout" id="ias.zone1"></div><div class="ias-zone" data-ias-zoneid="hcc_footer_flyout" id="ias.zone2"></div><div class="ias-zone ias-survey-zone" data-ias-zoneid="hcc_layer" id="ias.zone3"></div><div class="page-transition__blocker"><div class="page-transition__loading-spin loading-spin"></div></div><iframe height="0" width="0" src="https://13183894.fls.doubleclick.net/activityi;src=13183894;type=pageview;cat=allqua0;rcb=17;ord=A5cd0C6BCA3EAef8;npa=0;auiddc=967929971.1773035017;u1=null;u2=my.ionos.com%2Fwebhosting%2Fc5e1dbb7-e605-438f-8139-996e4321f7eb%2Fwebspace-explorer%2Fedit-file;u7=desktop;u10=null;u20=us;u29=true;uaa=x86;uab=64;uafvl=Chromium%3B148.0.7778.96%7CGoogle%2520Chrome%3B148.0.7778.96%7CNot%252FA)Brand%3B99.0.0.0;uamb=0;uam=;uap=macOS;uapv=12.7.6;uaw=0;pscdl=noapi;frm=0;user_data_mode=a;_tu=IAAB;gtm=45fe6562v9135077074za200zb9104440332zd9104440332xec;gcs=G111;gcd=13r3r3r3r5l1;dma=0;dc_fmt=2;tag_exp=0~115616985~115938465~115938469~118463262;epver=2;em=tv.1;dc_random=1778222100_ZGP6WUqxmKyEVGm4ECHLxPRp6g8DJ09aVQ;_dc_test=1;~oref=https%3A%2F%2Fmy.ionos.com%2Fwebhosting%2Fc5e1dbb7-e605-438f-8139-996e4321f7eb%2Fwebspace-explorer%2Fedit-file%3Ffile%3Dindex.php%26path%3D%252Fverified%252Fbackend%252Fpublic?" style="display: none; visibility: hidden;"></iframe><div class="static-overlay__blocker static-overlay__blocker--hidden"></div></body></html>

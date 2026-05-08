@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* EMBLA REQUIRED CSS */
+.embla {
+  overflow: hidden;
+}
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  min-width: 100%;
+}
+
+@media (min-width: 640px) {
+  .embla__slide {
+    min-width: 50%;
+  }
+}
+
+@media (min-width: 768px) {
+  .embla__slide {
+    min-width: 33.333%;
+  }
+}

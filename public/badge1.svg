@@ -1,0 +1,19 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="60" stroke="#2ED3B7" stroke-width="2"></circle>
+  
+  <!-- Laurel Left -->
+  <path d="M30 80 C20 60, 20 40, 40 30" stroke="#2ED3B7" stroke-width="2" fill="none"></path>
+  <path d="M35 75 C28 60, 30 45, 45 35" stroke="#2ED3B7" stroke-width="2" fill="none"></path>
+
+  <!-- Laurel Right -->
+  <path d="M110 80 C120 60, 120 40, 100 30" stroke="#2ED3B7" stroke-width="2" fill="none"></path>
+  <path d="M105 75 C112 60, 110 45, 95 35" stroke="#2ED3B7" stroke-width="2" fill="none"></path>
+
+  <!-- Center Text -->
+  <text x="50%" y="50%" text-anchor="middle" fill="#0B1F3A" font-size="12" font-family="Arial" dy="-5">
+    Top Rated
+  </text>
+  <text x="50%" y="50%" text-anchor="middle" fill="#2ED3B7" font-size="14" font-weight="bold" font-family="Arial" dy="15">
+    2025
+  </text>
+</svg>

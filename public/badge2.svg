@@ -1,0 +1,17 @@
+<svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="70" cy="70" r="60" stroke="#2ED3B7" stroke-width="2"></circle>
+
+  <!-- Star Top -->
+  <text x="50%" y="30%" text-anchor="middle" fill="#2ED3B7" font-size="16">★ ★ ★</text>
+
+  <!-- Center Text -->
+  <text x="50%" y="50%" text-anchor="middle" fill="#0B1F3A" font-size="11" font-family="Arial" dy="-5">
+    Trusted Industry
+  </text>
+  <text x="50%" y="50%" text-anchor="middle" fill="#0B1F3A" font-size="11" font-family="Arial" dy="10">
+    Leaders
+  </text>
+
+  <!-- Bottom Line -->
+  <line x1="40" y1="90" x2="100" y2="90" stroke="#2ED3B7" stroke-width="2"></line>
+</svg>
