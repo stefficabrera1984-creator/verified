@@ -22,7 +22,7 @@ export default function theTruth() {
   }
 
   const content = data;
-  console.log("TRUTH FULL DATA:", data);
+  console.log("TRUTH CONTENT:", content);
   return (
     <>
       <InnerHeader />
@@ -34,10 +34,10 @@ export default function theTruth() {
           <div className="max-w-3xl mx-auto">
 
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            {content?.hero_title}
+            {content.hero_title}
             </h1>
 
-            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content?.hero_subtitle }}
+            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.hero_subtitle }}
           />
 
           </div>
