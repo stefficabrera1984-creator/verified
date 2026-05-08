@@ -7,9 +7,9 @@ export async function GET() {
 
     const data = await res.json();
 
-    // ✅ Parse content here (so frontend stays clean)
     let parsedContent = data.content;
 
+    // ✅ Parse if needed
     if (typeof data.content === "string") {
       try {
         parsedContent = JSON.parse(data.content);
