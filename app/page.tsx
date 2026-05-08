@@ -24,29 +24,34 @@ export default function Home() {
     fetch("/api/home")
       .then(res => res.json())
       .then((res) => {
-        console.log("HOME:", res);
+        console.log("RAW API:", res);
   
-        let parsedContent = {};
+        let parsedContent = res.content;
   
-        try {
-          parsedContent =
-            typeof res.content === "string"
-              ? JSON.parse(res.content)
-              : res.content || {};
-        } catch (e) {
-          console.error("Parse error:", e);
+        // ✅ ONLY parse if it's a string
+        if (typeof res.content === "string") {
+          try {
+            parsedContent = JSON.parse(res.content);
+          } catch (e) {
+            console.error("PARSE ERROR:", e);
+            parsedContent = {};
+          }
         }
   
-        setData({
+        const finalData = {
           ...res,
-          content: parsedContent
-        });
+          content: parsedContent || {}
+        };
+  
+        console.log("FINAL DATA:", finalData);
+  
+        setData(finalData);
       })
       .catch(err => console.error("FETCH ERROR:", err));
   }, []);
    // ✅ IMPORTANT FIX
    if (!data) {
-    return <div style={{ padding: "40px" }}>Loading...</div>;
+    return <div>Loading...</div>;
   }
    const content = data.content;
  
