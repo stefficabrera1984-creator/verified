@@ -22,6 +22,7 @@ export default function theLegal() {
   }
 
   const content = data.content; // ✅ IMPORTANT FIX
+  console.log("LEGAL FULL DATA:", data);
   return (
     <>
       <InnerHeader />
