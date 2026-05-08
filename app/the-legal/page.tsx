@@ -52,21 +52,30 @@ export default function theLegal() {
 
       {/* RISK CARDS */}
       <section className="pb-16 md:pb-20 px-6">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
 
-        {data?.cards?.map((card: { title: string; desc: string }, index: number) => (
-          <div  key={index} className="p-6 border border-green-100 rounded-xl hover:shadow-md transition">
-            <h3 className="text-lg font-semibold mb-2">📈 {card.title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed" dangerouslySetInnerHTML={{
-            __html: card.desc
-          }}
-        />
-          </div>
+    {data?.content?.cards?.map(
+      (card: { title: string; desc: string }, index: number) => (
+        <div
+          key={index}
+          className="p-6 border border-green-100 rounded-xl hover:shadow-md transition"
+        >
+          <h3 className="text-lg font-semibold mb-2">
+            📈 {card.title}
+          </h3>
 
-))}
-
+          <div
+            className="text-gray-600 text-sm leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: card.desc,
+            }}
+          />
         </div>
-      </section>
+      )
+    )}
+
+  </div>
+</section>
 
       {/* HIGHLIGHT STRIP */}
       <section className="bg-[#F3F8F7] py-12 text-center px-6">
