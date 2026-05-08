@@ -13,4 +13,6 @@ export async function GET() {
     console.error(error);
     return Response.json({ error: "API failed" }, { status: 500 });
   }
-} 
+} git add .
+git commit -m "Fix legal API parsing"
+git push

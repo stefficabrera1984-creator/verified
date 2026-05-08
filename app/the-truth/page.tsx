@@ -3,29 +3,27 @@
 import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
-import { getPage } from "../../lib/api";
 
-export default function TheLegal() {
-
-  // ✅ ADD THIS (IMPORTANT)
+export default function theTruth() {
   const [data, setData] = useState<any>(null);
 
-   // ✅ API CALL
-   useEffect(() => {
-    getPage("red-flags")
-    .then((res: any) => {
-        console.log("DATA:", res);
-        setData(res.content);
+  useEffect(() => {
+    fetch("/api/the-truth")
+      .then(res => res.json())
+      .then((res) => {
+        console.log("TRUTH:", res);
+        setData(res);
       })
-      .catch((err: any) => console.error(err));
+      .catch(err => console.error(err));
   }, []);
 
+  if (!data) {
+    return <p className="p-10 text-center">Loading...</p>;
+  }
 
-if (!data) return <p>Loading...</p>;
-console.log("DATA:", data); // 👈 ADD HERE
-const content = data;
-return (
- 
+  const content = data.content; // ✅ IMPORTANT FIX
+  console.log("TRUTH FULL DATA:", data);
+  return (
     <>
       <InnerHeader />
 
@@ -36,10 +34,10 @@ return (
           <div className="max-w-3xl mx-auto">
 
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            {content.hero_title}
+            {content?.hero_title}
             </h1>
 
-            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content.hero_subtitle }}
+            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content?.hero_subtitle }}
           />
 
           </div>
