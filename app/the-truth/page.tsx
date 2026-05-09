@@ -12,7 +12,7 @@ export default function theTruth() {
     const fetchData = async () => {
       try {
         const res = await fetch(
-          "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
+          `https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth?ts=${Date.now()}`,
           { cache: "no-store" }
         );
 
@@ -30,36 +30,30 @@ export default function theTruth() {
     fetchData();
   }, []);
 
-  // ✅ Prevent crash while loading
+  // ✅ MUST EXIST
   if (!data) {
     return <p className="p-10 text-center">Loading...</p>;
   }
 
   console.log("DATA:", data);
 
-  // ✅ SAFE PARSE
+  // ✅ SAFE ACCESS
   let content: any = {};
 
-  try {
-    content =
-      typeof data.content === "string"
-        ? JSON.parse(data.content)
-        : data.content || {};
-  } catch (e) {
-    console.error("PARSE ERROR:", e);
+  if (data && data.content) {
+    try {
+      content =
+        typeof data.content === "string"
+          ? JSON.parse(data.content)
+          : data.content;
+    } catch (e) {
+      console.error("PARSE ERROR:", e);
+    }
   }
 
-  // ✅ IMPORTANT DEBUG CHECK
-  console.log("SLUG:", data.slug);
-  console.log("CONTENT:", content);
-
-  // ✅ If wrong data comes, show message
-  if (!content.hero_title) {
-    return (
-      <p className="p-10 text-center text-red-500">
-        No Truth Data Found (Check API content)
-      </p>
-    );
+  // ✅ SAFETY CHECK
+  if (!content || Object.keys(content).length === 0) {
+    return <p className="p-10 text-center">No Content Found</p>;
   }
 
   return (
@@ -124,9 +118,7 @@ export default function theTruth() {
                 key={j}
                 className="bg-[#F9FBFB] p-4 rounded-lg border-l-4 border-[#2ED3B7]"
               >
-                <p className="text-sm text-gray-700">
-                  {point} {/* ✅ FIXED: simple string */}
-                </p>
+                <div dangerouslySetInnerHTML={{ __html: point }} />
               </div>
             ))}
           </div>
