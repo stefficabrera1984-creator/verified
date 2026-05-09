@@ -5,7 +5,7 @@ import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
 
-export default function redFlags() {
+export default function theTruth() {
 
   // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
