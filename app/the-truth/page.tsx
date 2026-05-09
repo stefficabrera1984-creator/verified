@@ -31,9 +31,18 @@ export default function theTruth() {
   
     fetchData();
   }, []);
-return <h1 style={{ fontSize: "40px" }}>THIS IS TRUTH PAGE</h1>;
+
 console.log("DATA:", data); // 👈 ADD HERE
-const content = data?.content || {};
+let content = {};
+
+try {
+  content =
+    typeof data.content === "string"
+      ? JSON.parse(data.content)
+      : data.content || {};
+} catch (e) {
+  console.error("PARSE ERROR:", e);
+}
 return (
 
     <>
