@@ -30,24 +30,37 @@ export default function theTruth() {
     fetchData();
   }, []);
 
-  // ✅ VERY IMPORTANT (prevents crash)
+  // ✅ Prevent crash while loading
   if (!data) {
     return <p className="p-10 text-center">Loading...</p>;
   }
 
   console.log("DATA:", data);
 
-  // ✅ SAFE PARSE (handles both string & object)
+  // ✅ SAFE PARSE
   let content: any = {};
 
-try {
-  content =
-    typeof data.content === "string"
-      ? JSON.parse(data.content)
-      : data.content || {};
-} catch (e) {
-  console.error("PARSE ERROR:", e);
-}
+  try {
+    content =
+      typeof data.content === "string"
+        ? JSON.parse(data.content)
+        : data.content || {};
+  } catch (e) {
+    console.error("PARSE ERROR:", e);
+  }
+
+  // ✅ IMPORTANT DEBUG CHECK
+  console.log("SLUG:", data.slug);
+  console.log("CONTENT:", content);
+
+  // ✅ If wrong data comes, show message
+  if (!content.hero_title) {
+    return (
+      <p className="p-10 text-center text-red-500">
+        No Truth Data Found (Check API content)
+      </p>
+    );
+  }
 
   return (
     <>
