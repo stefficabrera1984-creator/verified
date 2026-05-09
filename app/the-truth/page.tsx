@@ -14,28 +14,15 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        `https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth?ts=${Date.now()}`
+        `https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth?ts=${Date.now()}`,
+        { cache: "no-store" }
       );
+
       const json = await res.json();
 
-      console.log("API RAW:", json);
+      console.log("FINAL DATA:", json);
 
-      // ✅ SAFE PARSE (no crash)
-      let parsedContent = {};
-      try {
-        parsedContent = json.content ? JSON.parse(json.content) : {};
-      } catch (e) {
-        console.error("JSON PARSE ERROR:", e);
-      }
-
-      const finalData = {
-        ...json,
-        content: parsedContent,
-      };
-
-      console.log("FINAL DATA:", finalData);
-
-      setData(finalData);
+      setData(json);
 
     } catch (error) {
       console.error("FETCH ERROR:", error);
@@ -44,7 +31,6 @@ useEffect(() => {
 
   fetchData();
 }, []);
-
 
 if (!data || !data.content) {
   return <p className="p-10 text-center">Loading...</p>;
