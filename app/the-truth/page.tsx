@@ -10,29 +10,27 @@ export default function theTruth() {
   // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await fetch(
-        "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth"
-      );
-      
-      const text = await res.text();
-      console.log("RAW RESPONSE:", text);
-
-      const json = await res.json();
-
-      console.log("FINAL DATA:", json);
-
-      setData(json);
-
-    } catch (error) {
-      console.error("FETCH ERROR:", error);
-    }
-  };
-
-  fetchData();
-}, []);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(
+          "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
+          { cache: "no-store" }
+        );
+  
+        const json = await res.json(); // ✅ ONLY THIS
+  
+        console.log("FINAL DATA:", json);
+  
+        setData(json);
+  
+      } catch (error) {
+        console.error("FETCH ERROR:", error);
+      }
+    };
+  
+    fetchData();
+  }, []);
 return <h1 style={{ fontSize: "40px" }}>THIS IS TRUTH PAGE</h1>;
 console.log("DATA:", data); // 👈 ADD HERE
 const content = data?.content || {};
