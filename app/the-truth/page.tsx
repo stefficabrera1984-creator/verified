@@ -4,10 +4,8 @@ import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
-
 export default function theTruth() {
 
-  // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
 
   useEffect(() => {
@@ -17,23 +15,30 @@ export default function theTruth() {
           "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
           { cache: "no-store" }
         );
-  
-        const json = await res.json(); // ✅ ONLY THIS
-  
+
+        const json = await res.json();
+
         console.log("FINAL DATA:", json);
-  
+
         setData(json);
-  
+
       } catch (error) {
         console.error("FETCH ERROR:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
-console.log("DATA:", data); // 👈 ADD HERE
-let content = {};
+  // ✅ VERY IMPORTANT (prevents crash)
+  if (!data) {
+    return <p className="p-10 text-center">Loading...</p>;
+  }
+
+  console.log("DATA:", data);
+
+  // ✅ SAFE PARSE (handles both string & object)
+  let content: any = {};
 
 try {
   content =
@@ -43,8 +48,8 @@ try {
 } catch (e) {
   console.error("PARSE ERROR:", e);
 }
-return (
 
+  return (
     <>
       <InnerHeader />
 
