@@ -4,26 +4,56 @@ import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
-export default function theTruth() {
+
+export default function redFlags() {
+
+  // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
 
-  useEffect(() => {
-    fetch("/api/the-truth")
-      .then(res => res.json())
-      .then((res) => {
-        console.log("TRUTH:", res);
-        setData(res);
-      })
-      .catch(err => console.error(err));
-  }, []);
+useEffect(() => {
+  const fetchData = async () => {
+    try {
+      const res = await fetch(
+        "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth"
+      );
 
-  if (!data) {
-    return <p className="p-10 text-center">Loading...</p>;
-  }
+      const json = await res.json();
 
-  const content = data.content; // ✅ IMPORTANT FIX
-  console.log("TRUTH CONTENT:", content);
-  return (
+      console.log("API RAW:", json);
+
+      // ✅ SAFE PARSE (no crash)
+      let parsedContent = {};
+      try {
+        parsedContent = json.content ? JSON.parse(json.content) : {};
+      } catch (e) {
+        console.error("JSON PARSE ERROR:", e);
+      }
+
+      const finalData = {
+        ...json,
+        content: parsedContent,
+      };
+
+      console.log("FINAL DATA:", finalData);
+
+      setData(finalData);
+
+    } catch (error) {
+      console.error("FETCH ERROR:", error);
+    }
+  };
+
+  fetchData();
+}, []);
+
+
+if (!data || !data.content) {
+  return <p className="p-10 text-center">Loading...</p>;
+}
+console.log("DATA:", data); // 👈 ADD HERE
+const content = data?.content || {};
+return (
+
     <>
       <InnerHeader />
 
@@ -34,11 +64,14 @@ export default function theTruth() {
           <div className="max-w-3xl mx-auto">
 
             <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            {content?.hero_title}
+            {content.hero_title}
             </h1>
 
-            <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content?.hero_subtitle }}
-          />
+         
+            <div
+  className="text-gray-600 text-lg leading-relaxed"
+  dangerouslySetInnerHTML={{ __html: content.hero_subtitle }}
+/>
 
           </div>
         </section>
