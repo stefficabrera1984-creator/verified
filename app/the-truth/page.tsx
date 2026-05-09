@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
