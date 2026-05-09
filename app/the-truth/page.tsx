@@ -4,148 +4,108 @@ import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
-
 export default function theTruth() {
-
-  // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await fetch(
-        "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth"
-      );
+  useEffect(() => {
+    fetch("/api/the-truth")
+      .then(res => res.json())
+      .then((res) => {
+        console.log("truth:", res);
+        setData(res);
+      })
+      .catch(err => console.error(err));
+  }, []);
 
-      const json = await res.json();
+  if (!data) {
+    return <p className="p-10 text-center">Loading...</p>;
+  }
 
-      console.log("API RAW:", json);
-
-      // ✅ SAFE PARSE (no crash)
-      let parsedContent = {};
-      try {
-        parsedContent = json.content ? JSON.parse(json.content) : {};
-      } catch (e) {
-        console.error("JSON PARSE ERROR:", e);
-      }
-
-      const finalData = {
-        ...json,
-        content: parsedContent,
-      };
-
-      console.log("FINAL DATA:", finalData);
-
-      setData(finalData);
-
-    } catch (error) {
-      console.error("FETCH ERROR:", error);
-    }
-  };
-
-  fetchData();
-}, []);
-
-
-if (!data || !data.content) {
-  return <p className="p-10 text-center">Loading...</p>;
-}
-console.log("DATA:", data); // 👈 ADD HERE
-const content = data?.content || {};
-return (
-
+  const content = data.content; // ✅ IMPORTANT FIX
+  console.log("LEGAL FULL DATA:", data);
+  return (
     <>
       <InnerHeader />
+    <main className="bg-white text-gray-900">
 
-      <main className="bg-white text-gray-900">
+      {/* HERO */}
+      <section className="bg-gradient-to-r from-[#1FAF9A] to-[#1FAF9A] text-white py-16 md:py-20 px-6 text-center z-10">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-5xl font-bold leading-tight mb-6">
+          {content?.hero_title}
+          </h1>
 
-        {/* HERO */}
-        <section className="bg-gradient-to-r from-[#1FAF9A] to-[#1FAF9A] text-white py-16 md:py-20 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-
-            <h1 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
-            {content.hero_title}
-            </h1>
-
-         
-            <div
-  className="text-gray-600 text-lg leading-relaxed"
-  dangerouslySetInnerHTML={{ __html: content.hero_subtitle }}
-/>
-
-          </div>
-        </section>
-
-        {/* INTRO */}
-        <section className="py-12 md:py-16 px-6 text-center">
-          <div className="max-w-3xl mx-auto">
-            <div className="text-lg text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro }} /> 
-          </div>
-        </section>
-
-        {/* PHASES */}
-        <section className="py-16 md:py-20 px-6">
-  <div className="max-w-5xl mx-auto space-y-12">
-
-    {content?.steps?.map((step: any, i: number) => (
-      <div key={i} className="flex gap-6">
-
-        {/* NUMBER */}
-        <div className="text-[#2ED3B7] font-bold text-xl">
-          {String(i + 1).padStart(2, "0")}
+          <div className="text-gray-300 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: content?.hero_subtitle }}
+          />
         </div>
+      </section>
 
-        {/* CONTENT */}
-        <div>
+      {/* INTRO */}
+      <section className="py-12 md:py-16 px-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-4">
+          {content.section_title}
+          </h2>
+          <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.section_desc }}
+          />
+        </div>
+      </section>
 
-          <h3 className="text-xl font-semibold mb-2">
-            {step.title}
+      {/* RISK CARDS */}
+      <section className="pb-16 md:pb-20 px-6">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+
+    {data?.content?.cards?.map(
+      (card: { title: string; desc: string }, index: number) => (
+        <div
+          key={index}
+          className="p-6 border border-green-100 rounded-xl hover:shadow-md transition"
+        >
+          <h3 className="text-lg font-semibold mb-2">
+            📈 {card.title}
           </h3>
 
-          {/* ✅ FIXED: subtitle instead of desc */}
           <div
-            className="text-gray-600 text-sm mb-4"
-            dangerouslySetInnerHTML={{ __html: step.subtitle }}
+            className="text-gray-600 text-sm leading-relaxed"
+            dangerouslySetInnerHTML={{
+              __html: card.desc,
+            }}
+          />
+        </div>
+      )
+    )}
+
+  </div>
+</section>
+
+      {/* HIGHLIGHT STRIP */}
+      <section className="bg-[#F3F8F7] py-12 text-center px-6">
+        <div className="max-w-3xl mx-auto">
+          <div className="text-lg md:text-xl font-medium text-[#0A1E39] leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: content.highlight_text }}
+          />
+        </div>
+      </section>
+
+      {/* DEFENSE SECTION */}
+      <section className="py-16 md:py-20 px-6">
+        <div className="max-w-4xl mx-auto text-center space-y-6">
+
+          <h2 className="text-2xl md:text-3xl font-semibold">
+          {content.final_title}
+          </h2>
+
+          <p className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.final_desc }}
           />
 
-          {/* SUB POINTS */}
-          <div className="space-y-4">
-            {step?.points?.map((point: string, j: number) => (
-              <div
-                key={j}
-                className="bg-[#F9FBFB] p-4 rounded-lg border-l-4 border-[#2ED3B7]"
-              >
-                <p className="text-sm text-gray-700">
-                  {point} {/* ✅ FIXED: simple string */}
-                </p>
-              </div>
-            ))}
-          </div>
+          <p className="text-xl md:text-2xl font-semibold text-[#0A1E39]" dangerouslySetInnerHTML={{ __html: content.final_bold }}
+          />
 
         </div>
+      </section>
 
-      </div>
-    ))}
-
-  </div>
-</section>
-
-        {/* GOAL SECTION */}
-        <section className="bg-white py-16 md:py-20 text-center px-6">
-  <div className="max-w-3xl mx-auto">
-
-    {/* subtle accent */}
-    <div className="w-12 h-[2px] bg-[#2ED3B7] mx-auto mb-6"></div>
-
-    <h3 className="text-2xl md:text-3xl font-semibold text-[#0A1E39] mb-4">
-    {content.goal_title}
-    </h3>
-
-    <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.goal_desc }} />
-  </div>
-</section>
-        {/* CTA */}
-        <section className="bg-[#E6F6F3] py-16 md:py-20 text-center px-6">
+      {/* FINAL CTA */}
+      <section className="bg-[#E6F6F3] py-16 md:py-20 text-center px-6">
   <div className="max-w-3xl mx-auto">
 
     <h3 className="text-2xl md:text-3xl font-semibold text-[#0A1E39] mb-4">
@@ -160,10 +120,10 @@ return (
 
   </div>
 </section>
+    </main>
 
-      </main>
+    <Footer />
 
-      <Footer />
     </>
   );
 }
