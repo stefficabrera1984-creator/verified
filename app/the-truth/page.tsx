@@ -14,10 +14,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
-        {
-          cache: "no-store", // ✅ THIS FIXES IT
-        }
+        `https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth?ts=${Date.now()}`
       );
       const json = await res.json();
 
