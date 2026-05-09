@@ -1,57 +1,30 @@
-import { useState, useEffect } from "react";
 import InnerHeader from "@/components/InnerHeader";
 import Footer from "@/components/Footer";
 
-export default function theTruth() {
+async function getData() {
+  const res = await fetch(
+    "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
+    { cache: "no-store" }
+  );
 
-  const [data, setData] = useState<any>(null);
+  const data = await res.json();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(
-          `https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth?ts=${Date.now()}`,
-          { cache: "no-store" }
-        );
+  return data;
+}
 
-        const json = await res.json();
+export default async function TheTruth() {
 
-        console.log("FINAL DATA:", json);
+  const data = await getData();
 
-        setData(json);
-
-      } catch (error) {
-        console.error("FETCH ERROR:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-
-  // ✅ MUST EXIST
-  if (!data) {
-    return <p className="p-10 text-center">Loading...</p>;
-  }
-
-  console.log("DATA:", data);
-
-  // ✅ SAFE ACCESS
   let content: any = {};
 
-  if (data && data.content) {
-    try {
-      content =
-        typeof data.content === "string"
-          ? JSON.parse(data.content)
-          : data.content;
-    } catch (e) {
-      console.error("PARSE ERROR:", e);
-    }
-  }
-
-  // ✅ SAFETY CHECK
-  if (!content || Object.keys(content).length === 0) {
-    return <p className="p-10 text-center">No Content Found</p>;
+  try {
+    content =
+      typeof data.content === "string"
+        ? JSON.parse(data.content)
+        : data.content || {};
+  } catch (e) {
+    console.error("PARSE ERROR:", e);
   }
 
   return (
