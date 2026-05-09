@@ -33,10 +33,7 @@ useEffect(() => {
 
   fetchData();
 }, []);
-
-if (!data || !data.content) {
-  return <p className="p-10 text-center">Loading...</p>;
-}
+return <h1 style={{ fontSize: "40px" }}>THIS IS TRUTH PAGE</h1>;
 console.log("DATA:", data); // 👈 ADD HERE
 const content = data?.content || {};
 return (
