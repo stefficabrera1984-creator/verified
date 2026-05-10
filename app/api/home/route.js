@@ -1,7 +1,7 @@
 export async function GET() {
   try {
     const res = await fetch(
-      "https://www.verifiedequalaccess.com/backend/index.php/api/pages/home",
+      "https://backend.verifiedequalaccess.com/api/pages/home",
       { cache: "no-store" }
     );
 

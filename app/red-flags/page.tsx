@@ -14,7 +14,7 @@ useEffect(() => {
   const fetchData = async () => {
     try {
       const res = await fetch(
-        "https://verifiedequalaccess.com/backend/index.php/api/pages/red-flags"
+        "https://backend.verifiedequalaccess.com/api/pages/red-flags"
       );
 
       const json = await res.json();

@@ -1,7 +1,7 @@
 const BASE_URL =
   typeof window !== "undefined" && window.location.hostname === "localhost"
     ? "http://127.0.0.1:8000/api"
-    : "https://verifiedequalaccess.com/backend/index.php/api";
+    : "https://backend.verifiedequalaccess.com/api";
 
 export async function fetchAPI(endpoint: string) {
   const res = await fetch(

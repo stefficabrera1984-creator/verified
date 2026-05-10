@@ -38,7 +38,7 @@ export default function InnerHeader() {
 
   
     useEffect(() => {
-      fetch("https://verifiedequalaccess.com/backend/index.php/api/menu-pages")
+      fetch("https://backend.verifiedequalaccess.com/api/menu-pages")
         .then(res => res.json())
         .then(data => {
           console.log("MENU:", data);
@@ -47,7 +47,7 @@ export default function InnerHeader() {
         .catch(err => console.error(err));
         
         // 🔹 SETTINGS
-        fetch("https://verifiedequalaccess.com/backend/index.php/api/settings")
+        fetch("https://backend.verifiedequalaccess.com/api/settings")
           .then(res => res.json())
           .then(data => {
             console.log("SETTINGS:", data);
@@ -72,7 +72,7 @@ export default function InnerHeader() {
           <Link href="/">
             {logo && (
               <img
-              src={`https://verifiedequalaccess.com/backend/storage/${logo}`}
+              src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
                 alt={logoAlt || "Logo"}
                 width={140}
                 height={40}

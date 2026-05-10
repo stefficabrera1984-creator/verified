@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 
 async function getData() {
   const res = await fetch(
-    "https://verifiedequalaccess.com/backend/index.php/api/pages/the-truth",
+    "https://backend.verifiedequalaccess.com/api/pages/the-truth",
     { cache: "no-store" }
   );
 
