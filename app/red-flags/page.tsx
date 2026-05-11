@@ -73,35 +73,33 @@ return (
         </section>
 
         {/* RED FLAGS */}
-        <section className="py-16 md:py-20 px-6">
+     {/* RED FLAGS GRID */}
+<section className="py-16 md:py-20 px-6">
   <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-    {/* Check if cards exist before mapping to prevent crashes */}
-    {content.cards && content.cards.map((card, index) => (
-      <div 
-        key={index} 
-        className="p-6 border border-red-100 rounded-xl hover:shadow-md transition bg-white"
-      >
-        <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
-          🚩 {card.title}
-        </h3>
-
-        <p className="text-gray-600 text-sm mb-4">
-          {card.desc}
-        </p>
-
-        {/* If you want to keep the "Reality/Trap/Consequence" styling, 
-           you can either save that HTML in the 'desc' field in Admin 
-           or use the dangerouslySetInnerHTML attribute here:
-        */}
+    
+    {/* Explicitly telling TypeScript that 'card' is an object and 'index' is a number */}
+    {Array.isArray(content?.cards) ? (
+      content.cards.map((card: any, index: number) => (
         <div 
-          className="space-y-2 text-sm text-gray-700"
-          dangerouslySetInnerHTML={{ __html: card.extra_info || "" }} 
-        />
-      </div>
-    ))}
+          key={index} 
+          className="p-6 border border-red-100 rounded-xl hover:shadow-md transition bg-white"
+        >
+          <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
+            🚩 {card?.title || "No Title"}
+          </h3>
+
+          <p className="text-gray-600 text-sm mb-4">
+            {card?.desc || "No Description"}
+          </p>
+        </div>
+      ))
+    ) : (
+      /* Fallback in case cards aren't an array yet */
+      <p className="text-gray-400">Loading flags...</p>
+    )}
+
   </div>
 </section>
-
         {/* CTA */}
         <section className="bg-[#E6F6F3] py-16 md:py-20 text-center px-6">
           <div className="max-w-3xl mx-auto">
