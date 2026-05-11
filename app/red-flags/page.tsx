@@ -85,7 +85,7 @@ return (
             🚩 {card?.title || "No Title"}
           </h3>
           <div
-  className="text-gray-600 text-lg leading-relaxed"
+  className="text-gray-600 text-sm leading-relaxed"
   dangerouslySetInnerHTML={{ __html: card?.desc }}
 />
 
