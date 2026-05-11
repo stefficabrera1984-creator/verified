@@ -17,12 +17,7 @@ export default function theLegal() {
       .catch(err => console.error(err));
   }, []);
 
-  if (!data) {
-    return <p className="p-10 text-center">Loading...</p>;
-  }
-
-  const content = data.content; // ✅ IMPORTANT FIX
-  console.log("LEGAL FULL DATA:", data);
+ const content = data?.content || {};
   return (
     <>
       <InnerHeader />

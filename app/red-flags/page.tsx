@@ -34,10 +34,6 @@ export default function redFlags() {
     fetchData();
   }, []);
 
-if (!data || !data.content) {
-  return <p className="p-10 text-center">Loading...</p>;
-}
-console.log("DATA:", data); // 👈 ADD HERE
 const content = data?.content || {};
 return (
     <>
