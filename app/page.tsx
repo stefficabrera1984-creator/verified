@@ -264,7 +264,7 @@ export default function Home() {
 />
 
 {/* Footer SECTION */}
-<Footer settings={data} />
+<Footer />
 
  {/* ✅ ADD THIS AT VERY END */}
  <ScrollToTop />
