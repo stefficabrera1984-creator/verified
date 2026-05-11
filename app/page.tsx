@@ -49,12 +49,8 @@ export default function Home() {
       })
       .catch(err => console.error("FETCH ERROR:", err));
   }, []);
-   // ✅ IMPORTANT FIX
-   if (!data) {
-    return <div>Loading...</div>;
-  }
-   const content = data.content;
- 
+  
+ const content = data?.content || {};
   return (
     
     <main className="bg-white text-gray-900">
