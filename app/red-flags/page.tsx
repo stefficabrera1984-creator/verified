@@ -74,73 +74,33 @@ return (
 
         {/* RED FLAGS */}
         <section className="py-16 md:py-20 px-6">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+  <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+    {/* Check if cards exist before mapping to prevent crashes */}
+    {content.cards && content.cards.map((card, index) => (
+      <div 
+        key={index} 
+        className="p-6 border border-red-100 rounded-xl hover:shadow-md transition bg-white"
+      >
+        <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
+          🚩 {card.title}
+        </h3>
 
-            {/* FLAG 1 */}
-            <div className="p-6 border border-red-100 rounded-xl hover:shadow-md transition">
-              <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
-                🚩 The “100% Guaranteed” Myth
-              </h3>
+        <p className="text-gray-600 text-sm mb-4">
+          {card.desc}
+        </p>
 
-              <p className="text-gray-600 text-sm mb-4">
-              If a company claims their software can make you "100% compliant in 48 hours," walk away.
-              </p>
-
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold text-[#0A1E39]">Reality:</span> ADA compliance is highly contextual. No AI can perfectly determine if your video captions are accurate or if your custom navigation menu makes sense to a human user. Automated tools typically only catch 25–30% of accessibility issues.</p>
-              </div>
-            </div>
-
-            {/* FLAG 2 */}
-            <div className="p-6 border border-red-100 rounded-xl hover:shadow-md transition">
-              <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
-                🚩 Over-Reliance on "Overlays" as a Permanent Fix
-              </h3>
-
-              <p className="text-gray-600 text-sm mb-4">
-              While a widget is a helpful first step, some vendors sell them as a total solution.
-              </p>
-
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold">Trap:</span> These companies use JavaScript to "mask" errors rather than fixing your website’s source code.</p>
-                <p><span className="font-semibold">Consequence:</span> Plaintiff attorneys and "troll" bots can target websites with these overlays only because they know the underlying code is likely still broken. In 2024 and 2025, over 1,000 businesses were sued despite having these widgets installed and this number is starting to exponentially grow.</p>
-              </div>
-            </div>
-
-            {/* FLAG 3 */}
-            <div className="p-6 border border-red-100 rounded-xl hover:shadow-md transition">
-              <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
-                🚩 Predatory "Demand Letter" Vendors
-              </h3>
-
-              <p className="text-gray-600 text-sm mb-4">
-              Some companies have been known to work in a "sue-and-settle" cycle, where they scan for non-compliant sites to trigger legal threats, then offer their own subpar software as the "solution."
-              </p>
-
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold">Trap:</span> They profit from the problem they’ve identified.</p>
-                <p><span className="font-semibold">Consequence:</span> This creates a conflict of interest where their goal is a quick paycheck, not your long-term legal protection.</p>
-              </div>
-            </div>
-
-            {/* FLAG 4 */}
-            <div className="p-6 border border-red-100 rounded-xl hover:shadow-md transition">
-              <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
-                🚩 The "Set It and Forget It" Deception
-              </h3>
-
-              <p className="text-gray-600 text-sm mb-4">
-              Compliance is not a one-time event.
-              </p>
-
-              <div className="space-y-2 text-sm">
-                <p><span className="font-semibold">Trap:</span> Bad players promise that their AI will monitor your site forever with zero input from you.</p>
-                <p><span className="font-semibold">Consequence:</span> Digital content is dynamic. When you add a new product or a blog post, these "hands-off" tools often fail to tag images or structure headers correctly, leaving you open to new risks every single day.</p>
-              </div>
-            </div>
-
-          </div>
-        </section>
+        {/* If you want to keep the "Reality/Trap/Consequence" styling, 
+           you can either save that HTML in the 'desc' field in Admin 
+           or use the dangerouslySetInnerHTML attribute here:
+        */}
+        <div 
+          className="space-y-2 text-sm text-gray-700"
+          dangerouslySetInnerHTML={{ __html: card.extra_info || "" }} 
+        />
+      </div>
+    ))}
+  </div>
+</section>
 
         {/* CTA */}
         <section className="bg-[#E6F6F3] py-16 md:py-20 text-center px-6">
