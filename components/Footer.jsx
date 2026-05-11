@@ -33,9 +33,10 @@ export default function Footer({ settings = {} }) { // ✅ Added = {} as a defau
         </div>
 
         <div className="border-t border-white/10 mt-14 pt-6 text-center">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {settings?.copyright || "Verified Equal Access"}. All rights reserved.
-          </p>
+        <p className="text-sm text-gray-500">
+          {/* ✅ Safely checks for copyright, falls back to default if empty */}
+          © {currentYear} {settings?.footer_copyright}
+        </p>
         </div>
       </div>
     </footer>
