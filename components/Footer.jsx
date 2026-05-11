@@ -2,10 +2,12 @@
 
 import React from 'react';
 
-// The = {} ensures that if settings aren't loaded yet, the site won't crash
 export default function Footer({ settings = {} }) {
   
-  
+  // Navigate to the inner 'setting' object from your JSON
+  const siteData = settings?.setting || {};
+
+ 
   return (
     <footer className="bg-gradient-to-r from-[#081C35] to-[#0E2F4F] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -27,9 +29,10 @@ export default function Footer({ settings = {} }) {
 
         {/* COPYRIGHT SECTION */}
         <div className="border-t border-white/10 mt-14 pt-6 text-center">
-          <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {settings?.copyright}
-          </p>
+        <p className="text-sm text-gray-500">
+              {/* Displaying ONLY the admin data with a basic fallback if empty */}
+              {siteData?.copyright}
+            </p>
         </div>
       </div>
     </footer>
