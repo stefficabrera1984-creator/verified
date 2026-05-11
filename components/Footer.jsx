@@ -5,11 +5,7 @@ import React from 'react';
 // The = {} ensures that if settings aren't loaded yet, the site won't crash
 export default function Footer({ settings = {} }) {
   
-  // Logic for the logo path
-  const logoPath = settings?.inner_logo 
-    ? `https://backend.verifiedequalaccess.com/storage/${settings.inner_logo}` 
-    : "/logonew.png";
-
+  
   return (
     <footer className="bg-gradient-to-r from-[#081C35] to-[#0E2F4F] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
@@ -17,13 +13,7 @@ export default function Footer({ settings = {} }) {
           
           {/* LOGO SECTION */}
           <div>
-            <div className="flex items-center gap-2 mb-6">
-              <img 
-                src={logoPath} 
-                alt="logo" 
-                className="w-44 md:w-52 h-auto object-contain" 
-              />
-            </div>
+            
             <p className="text-gray-300 text-sm">
               Building accessible and compliant digital experiences that help businesses grow with confidence.
             </p>
