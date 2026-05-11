@@ -9,13 +9,12 @@ export default function Footer() {
 
           {/* LOGO + TEXT */}
           <div>
-          <div className="flex items-center gap-2 mb-6">
-            <img 
-              src={settings?.inner_logo ? `https://backend.verifiedequalaccess.com/storage/${settings.inner_logo}` : "/logonew.png"} 
-              alt="logo" 
-              className="w-44 md:w-52 h-auto object-contain" 
-            />
-          </div>
+            <div className="flex items-center gap-2">
+              <img src="/logonew.png" alt="logo" className="w-44 md:w-52 h-auto object-contain" />
+              <div className="leading-tight">
+                
+              </div>
+            </div>
 
             <p className="text-gray-300 text-base leading-relaxed max-w-sm">
               Building accessible and compliant digital experiences that help businesses grow with confidence.
