@@ -53,14 +53,10 @@ export default function Header() {
       src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
       alt={logoAlt || "Logo"}
       width={140}
-      onError={(e) => {
-        // This is a backup in case the /storage/ link fails
-        e.target.src = `https://backend.verifiedequalaccess.com/public/storage/${logo}`;
-      }}
+      className="object-contain"
     />
   )}
 </Link>
-
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
           {menuItems.map((item, index) => {

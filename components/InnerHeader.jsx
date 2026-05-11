@@ -73,13 +73,13 @@ export default function InnerHeader() {
 <Link href="/">
   {logo && (
     <img
-      src={`${API_BASE_URL.replace('/api', '')}/storage/${logo}`}
+      src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
       alt={logoAlt || "Logo"}
       width={140}
+      className="object-contain"
     />
   )}
 </Link>
-
           {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
 
