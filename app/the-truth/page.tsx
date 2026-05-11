@@ -135,7 +135,7 @@ export default async function TheTruth() {
 
       </main>
 
-      <Footer />
+      <Footer settings={data?.settings} />
     </>
   );
 }

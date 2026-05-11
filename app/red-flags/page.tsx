@@ -114,7 +114,7 @@ return (
 
       </main>
 
-      <Footer />
+      <Footer settings={data?.settings} />
     </>
   );
 }

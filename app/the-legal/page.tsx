@@ -117,7 +117,7 @@ export default function theLegal() {
 </section>
     </main>
 
-    <Footer />
+    <Footer settings={data?.settings} />
 
     </>
   );
