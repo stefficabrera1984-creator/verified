@@ -69,16 +69,16 @@ export default function InnerHeader() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4 flex items-center justify-between">
 
           {/* LOGO */}
-          <Link href="/">
-            {logo && (
-              <img
-              src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
-                alt={logoAlt || "Logo"}
-                width={140}
-                height={40}
-              />
-            )}
-          </Link>
+         {/* LOGO */}
+<Link href="/">
+  {logo && (
+    <img
+      src={`${API_BASE_URL.replace('/api', '')}/storage/${logo}`}
+      alt={logoAlt || "Logo"}
+      width={140}
+    />
+  )}
+</Link>
 
           {/* DESKTOP NAV */}
           <nav className="hidden md:flex items-center gap-8">
