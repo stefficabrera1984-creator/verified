@@ -90,10 +90,14 @@ export default function Footer() {
         {/* DIVIDER */}
         <div className="border-t border-white/10 mt-14 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
 
-        <p className="text-sm text-gray-500 text-center">
-    © {new Date().getFullYear()} {settings?.site_name || "Verified Equal Access"}. All rights reserved.
-  </p>
-          
+          <p className="text-sm text-gray-500 text-center md:text-left">
+            © {new Date().getFullYear()} Verified Equal Access. All rights reserved.
+          </p>
+
+          <div className="flex gap-6 text-sm text-gray-500">
+            <a href="#" className="hover:text-white transition">Privacy Policy</a>
+            <a href="#" className="hover:text-white transition">Terms</a>
+          </div>
 
         </div>
 
