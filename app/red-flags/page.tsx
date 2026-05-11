@@ -146,17 +146,15 @@ return (
         <section className="bg-[#E6F6F3] py-16 md:py-20 text-center px-6">
           <div className="max-w-3xl mx-auto">
 
-            <h3 className="text-2xl md:text-3xl font-semibold text-[#0A1E39] mb-4">
-              Don’t fall for shortcuts—
-            </h3>
+          <h3 className="text-2xl md:text-3xl font-semibold text-[#0A1E39] mb-4">
+    {content.cta_title}
+    </h3>
 
-            <p className="text-gray-600 mb-6">
-              build accessibility the right way from the start.
-            </p>
+    <div className="text-gray-600 mb-6" dangerouslySetInnerHTML={{ __html: content.cta_desc }} />
 
-            <button className="bg-[#2ED3B7] text-black px-6 py-3 rounded-md font-medium hover:opacity-90 transition">
-              Request an Audit
-            </button>
+    <button className="bg-[#2ED3B7] text-black px-6 py-3 rounded-md font-medium hover:opacity-90 transition">
+    {content.cta_button}
+    </button>
 
           </div>
         </section>
