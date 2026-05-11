@@ -21,11 +21,12 @@ export default function Header() {
   // Use the Environment Variable we set in Vercel
   const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
-  uuseEffect(() => {
+  useEffect(() => {
     // 🔹 FETCH MENUS
     fetch(`${API_BASE_URL}/menu-pages`)
       .then((res) => res.json())
       .then((data) => {
+        // Ensure menuItems is always an array to prevent .map() errors
         setMenuItems(Array.isArray(data) ? data : data.data || []);
       })
       .catch((err) => console.error("Menu fetch error:", err));
@@ -34,10 +35,14 @@ export default function Header() {
     fetch(`${API_BASE_URL}/settings`)
       .then((res) => res.json())
       .then((data) => {
-        // Updated to look for data.setting based on your JSON output
-        const settings = data?.setting || data?.data || data; 
-        setLogo(settings?.site_logo || null);
-        setLogoAlt(settings?.logo_alt || "");
+        console.log("SETTINGS DATA:", data);
+        // Look for 'setting' (singular) as seen in your JSON output
+        const config = data?.setting || data?.data || data;
+        
+        if (config) {
+          setLogo(config.site_logo || null);
+          setLogoAlt(config.logo_alt || "");
+        }
       })
       .catch((err) => console.error("Settings error:", err));
   }, [API_BASE_URL]);
