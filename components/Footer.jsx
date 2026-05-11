@@ -2,9 +2,10 @@
 
 import React from 'react';
 
-export default function Footer({ settings = {} }) { // ✅ Added = {} as a default
+// The = {} ensures that if settings aren't loaded yet, the site won't crash
+export default function Footer({ settings = {} }) {
   
-  // Create a safe URL with a fallback
+  // Logic for the logo path
   const logoPath = settings?.inner_logo 
     ? `https://backend.verifiedequalaccess.com/storage/${settings.inner_logo}` 
     : "/logonew.png";
@@ -13,6 +14,8 @@ export default function Footer({ settings = {} }) { // ✅ Added = {} as a defau
     <footer className="bg-gradient-to-r from-[#081C35] to-[#0E2F4F] text-white pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid gap-12 md:grid-cols-4 items-start">
+          
+          {/* LOGO SECTION */}
           <div>
             <div className="flex items-center gap-2 mb-6">
               <img 
@@ -26,17 +29,17 @@ export default function Footer({ settings = {} }) { // ✅ Added = {} as a defau
             </p>
           </div>
 
-          {/* Dummy Legal/Contact/Social columns to keep structure */}
-          <div><h3 className="text-sm font-semibold mb-5">LEGAL</h3></div>
-          <div><h3 className="text-sm font-semibold mb-5">CONTACT</h3></div>
-          <div><h3 className="text-sm font-semibold mb-5">SOCIAL</h3></div>
+          {/* Dummy columns to maintain layout while you finish links */}
+          <div><h3 className="text-sm font-semibold mb-5 text-white tracking-wide">LEGAL</h3></div>
+          <div><h3 className="text-sm font-semibold mb-5 text-white tracking-wide">CONTACT</h3></div>
+          <div><h3 className="text-sm font-semibold mb-5 text-white tracking-wide">SOCIAL</h3></div>
         </div>
 
+        {/* COPYRIGHT SECTION */}
         <div className="border-t border-white/10 mt-14 pt-6 text-center">
-        <p className="text-sm text-gray-500">
-          {/* ✅ Safely checks for copyright, falls back to default if empty */}
-          © {currentYear} {settings?.footer_copyright || "Verified Equal Access. All rights reserved."}
-        </p>
+          <p className="text-sm text-gray-500">
+            © {new Date().getFullYear()} {settings?.copyright || "Verified Equal Access"}. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
