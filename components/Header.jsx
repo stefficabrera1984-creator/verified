@@ -46,16 +46,20 @@ export default function Header() {
   return (
     <header className="bg-[#0B1F3A] text-white sticky top-0 z-30">
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
-        {/* LOGO */}
-        <Link href="/">
-        {logo && (
-          <img
-            src={`${API_BASE_URL.replace('/api', '')}/storage/${logo}`}
-            alt={logoAlt || "Logo"}
-            width={140}
-          />
-        )}
-      </Link>
+       {/* LOGO */}
+<Link href="/">
+  {logo && (
+    <img
+      src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
+      alt={logoAlt || "Logo"}
+      width={140}
+      onError={(e) => {
+        // This is a backup in case the /storage/ link fails
+        e.target.src = `https://backend.verifiedequalaccess.com/public/storage/${logo}`;
+      }}
+    />
+  )}
+</Link>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
