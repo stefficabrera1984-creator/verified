@@ -64,11 +64,8 @@ return (
         {/* INTRO */}
         <section className="py-12 md:py-16 px-6 text-center">
           <div className="max-w-3xl mx-auto">
-            <p className="text-lg text-gray-600 leading-relaxed">
-              The accessibility space is filled with quick fixes and bold promises.
-              Understanding the difference between real remediation and risky shortcuts
-              is essential to protecting your business.
-            </p>
+          <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: content.intro_text }}
+          />
           </div>
         </section>
 
@@ -87,10 +84,12 @@ return (
           <h3 className="text-lg font-semibold mb-2 text-[#0A1E39]">
             🚩 {card?.title || "No Title"}
           </h3>
+          <div
+  className="text-gray-600 text-lg leading-relaxed"
+  dangerouslySetInnerHTML={{ __html: card?.desc }}
+/>
 
-          <p className="text-gray-600 text-sm mb-4">
-            {card?.desc || "No Description"}
-          </p>
+          
         </div>
       ))
     ) : (
