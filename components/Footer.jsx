@@ -28,7 +28,7 @@ export default function Footer({ settings = {} }) {
         {/* COPYRIGHT SECTION */}
         <div className="border-t border-white/10 mt-14 pt-6 text-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {settings?.copyright || "Verified Equal Access"}. All rights reserved.
+            © {new Date().getFullYear()} {settings?.copyright}
           </p>
         </div>
       </div>
