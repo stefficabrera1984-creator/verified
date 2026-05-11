@@ -48,14 +48,14 @@ export default function Header() {
       <div className="max-w-7xl mx-auto flex items-center justify-between px-6 md:px-12 py-4">
         {/* LOGO */}
         <Link href="/">
-          {logo && (
-            <img
-              src={`https://backend.verifiedequalaccess.com/storage/${logo}`}
-              alt={logoAlt || "Logo"}
-              width={140}
-            />
-          )}
-        </Link>
+        {logo && (
+          <img
+            src={`${API_BASE_URL.replace('/api', '')}/storage/${logo}`}
+            alt={logoAlt || "Logo"}
+            width={140}
+          />
+        )}
+      </Link>
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8">
