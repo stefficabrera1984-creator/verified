@@ -34,7 +34,7 @@ export default function Footer({ settings = {} }) { // ✅ Added = {} as a defau
 
         <div className="border-t border-white/10 mt-14 pt-6 text-center">
           <p className="text-sm text-gray-500">
-            © {new Date().getFullYear()} {settings?.site_name || "Verified Equal Access"}. All rights reserved.
+            © {new Date().getFullYear()} {settings?.copyright || "Verified Equal Access"}. All rights reserved.
           </p>
         </div>
       </div>
