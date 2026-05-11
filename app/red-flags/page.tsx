@@ -10,42 +10,29 @@ export default function redFlags() {
   // ✅ ADD THIS (IMPORTANT)
   const [data, setData] = useState<any>(null);
 
-useEffect(() => {
-  const fetchData = async () => {
-    try {
-      const res = await fetch(
-        "https://backend.verifiedequalaccess.com/api/pages/red-flags"
-      );
-
-      const json = await res.json();
-
-      console.log("API RAW:", json);
-
-      // ✅ SAFE PARSE (no crash)
-      let parsedContent = {};
+  useEffect(() => {
+    const fetchData = async () => {
       try {
-        parsedContent = json.content ? JSON.parse(json.content) : {};
-      } catch (e) {
-        console.error("JSON PARSE ERROR:", e);
+        const res = await fetch("https://backend.verifiedequalaccess.com/api/pages/red-flags");
+        const json = await res.json();
+  
+        if (json) {
+          // Laravel returns the object directly: { id: 1, slug: 'red-flags', content: {...} }
+          let parsedContent = json.content;
+  
+          // If for some reason it comes back as a string, parse it
+          if (typeof parsedContent === 'string') {
+            parsedContent = JSON.parse(parsedContent);
+          }
+  
+          setData({ ...json, content: parsedContent });
+        }
+      } catch (error) {
+        console.error("Fetch Error:", error);
       }
-
-      const finalData = {
-        ...json,
-        content: parsedContent,
-      };
-
-      console.log("FINAL DATA:", finalData);
-
-      setData(finalData);
-
-    } catch (error) {
-      console.error("FETCH ERROR:", error);
-    }
-  };
-
-  fetchData();
-}, []);
-
+    };
+    fetchData();
+  }, []);
 
 if (!data || !data.content) {
   return <p className="p-10 text-center">Loading...</p>;
